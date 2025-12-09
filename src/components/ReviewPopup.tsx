@@ -1,4 +1,6 @@
 import React, { useState } from 'react';
+import { GOOGLE_REVIEW_URL } from './Reviews';
+const GOOGLE_SHEETS_WEBAPP_URL = 'https://script.google.com/macros/s/AKfycbzAanbtZC6b-ay_J3h6VEBeHKgsZ3UwCx7hVlOmPuka8rIrgwjw37sjajlakkah2Ms5/exec';
 
 interface ReviewPopupProps {
   onClose: () => void;
@@ -27,7 +29,7 @@ const ReviewPopup: React.FC<ReviewPopupProps> = ({ onClose, onSubmit }) => {
     } else {
       setShowGooglePrompt(true);
       setTimeout(() => {
-        window.open('https://search.google.com/local/writereview?placeid=ChIJCeDZi7pzAHwR2-opn5R1-Is', '_blank');
+        window.open(GOOGLE_REVIEW_URL, '_blank');
         onClose();
       }, 1800);
     }
@@ -52,14 +54,30 @@ const ReviewPopup: React.FC<ReviewPopupProps> = ({ onClose, onSubmit }) => {
       setFeedbackError(`Please limit your feedback to ${FEEDBACK_WORD_LIMIT} words. Currently: ${wordCount}`);
       return;
     }
-    // Phone validation (optional, only if provided)
+    // Phone validation (optional, only if provided) - UK format
     if (phone) {
-      // Accepts numbers, spaces, dashes, parentheses, and +, must be 7-20 digits
-      // Allow + only at the start
-      const plusOk = phone[0] === '+' ? phone.slice(1) : phone;
-      const cleaned = plusOk.replace(/[^\d]/g, '');
-      if (cleaned.length < 7 || cleaned.length > 20 || (phone.match(/\+/g) || []).length > 1 || (phone.includes('+') && phone[0] !== '+')) {
-        setPhoneError('Please enter a valid phone number (7-20 digits, "+" allowed only at the start).');
+      // UK phone format: 10-11 digits, optional +44 prefix
+      // Allow spaces, dashes, parentheses
+      const cleaned = phone.replace(/[^\d+]/g, '');
+      const startsWithPlus44 = cleaned.startsWith('+44');
+      const digits = cleaned.replace(/[^\d]/g, '');
+      
+      // UK numbers: 10 digits without country code, or 11 with 0, or 12 with +44
+      if (startsWithPlus44) {
+        if (digits.length !== 12) {
+          setPhoneError('Please enter a valid UK phone number (e.g., +44 7XXX XXXXXX or 07XXX XXXXXX).');
+          return;
+        }
+      } else {
+        if (digits.length < 10 || digits.length > 11) {
+          setPhoneError('Please enter a valid UK phone number (e.g., +44 7XXX XXXXXX or 07XXX XXXXXX).');
+          return;
+        }
+      }
+      
+      // Check for multiple + signs or + not at start
+      if ((phone.match(/\+/g) || []).length > 1 || (phone.includes('+') && phone[0] !== '+')) {
+        setPhoneError('Please enter a valid UK phone number (e.g., +44 7XXX XXXXXX or 07XXX XXXXXX).');
         return;
       }
     }
@@ -83,7 +101,7 @@ const ReviewPopup: React.FC<ReviewPopupProps> = ({ onClose, onSubmit }) => {
         phoneToSend = "'" + phoneToSend;
       }
       formData.append('phone', phoneToSend);
-  fetch('https://script.google.com/macros/s/AKfycbzcWRQzmGkeNXIQWCtuMmEkMIz5w2Uq0hGR1Q7s5ZSggexlfTgm-3KudQeHCGJhgXnjKw/exec', {
+  fetch(GOOGLE_SHEETS_WEBAPP_URL, {
         method: 'POST',
         body: formData
       });
@@ -221,7 +239,7 @@ const ReviewPopup: React.FC<ReviewPopupProps> = ({ onClose, onSubmit }) => {
             <input
               type="tel"
               className="w-full border border-gray-300 rounded p-2 mb-2 text-gray-900 placeholder-gray-400 text-sm"
-              placeholder="Your phone number (optional)"
+              placeholder="UK phone number (optional, e.g., 07XXX XXXXXX)"
               value={phone}
               onChange={e => { setPhone(e.target.value); setPhoneError(''); }}
               maxLength={20}

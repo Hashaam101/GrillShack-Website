@@ -1,6 +1,7 @@
 import React, { forwardRef, useCallback, useEffect, useImperativeHandle, useRef, useState } from 'react';
 import Image from 'next/image';
 import MediaPreloader from './MediaPreloader';
+import FavoriteStarIcon from './FavoriteStarIcon';
 
 import placeholderImg from "@/../public/Images/menu.png";
 import type { Product as MenuItem } from '@/data/products';
@@ -12,10 +13,17 @@ export interface ScrollableMenuRef {
 interface ScrollableMenuCardsProps {
   menuItems: MenuItem[];
   onScrollEndChange?: (isAtEnd: boolean) => void;
+  /**
+   * Card-specific theme, independent of app theme. Defaults to light.
+   */
+  cardTheme?: 'light' | 'dark';
 }
 
 const ScrollableMenuCards = forwardRef<ScrollableMenuRef, ScrollableMenuCardsProps>(
-  ({ menuItems, onScrollEndChange }, ref) => {
+  ({ menuItems, onScrollEndChange, cardTheme = 'light' }, ref) => {
+
+    const isDarkCard = cardTheme === 'dark';
+    const [favorites, setFavorites] = useState<Record<string | number, boolean>>({});
 
     const scrollContainerRef = useRef<HTMLDivElement>(null);
     const [isAtEnd, setIsAtEnd] = useState(false);
@@ -101,15 +109,32 @@ const ScrollableMenuCards = forwardRef<ScrollableMenuRef, ScrollableMenuCardsPro
       };
     }, [menuItems, handleScroll, checkScrollPosition]); // Rerun if items or handlers change
 
+    useEffect(() => {
+      const storedFavorites = localStorage.getItem('menuFavorites');
+      if (storedFavorites) {
+        try {
+          setFavorites(JSON.parse(storedFavorites));
+        } catch (e) {
+          console.error('Failed to parse favorites from localStorage:', e);
+        }
+      }
+    }, []);
 
+    const toggleFavorite = (itemId: string | number) => {
+      setFavorites(prev => {
+        const updated = { ...prev, [itemId]: !prev[itemId] };
+        localStorage.setItem('menuFavorites', JSON.stringify(updated));
+        return updated;
+      });
+    };
 
   return (
-    <div className="w-full bg-primary-dark text-white px-2 sm:px-6 pt-3 pb-0">
+    <div className="w-full bg-primary-dark text-white pl-4 pr-0 py-0">
 
       {/* Scrollable Cards Section */}
       <div
         ref={scrollContainerRef}
-        className="flex overflow-x-auto gap-4 scrollbar-hide cursor-grab active:cursor-grabbing"
+        className="flex overflow-x-auto gap-4 scrollbar-hide cursor-grab active:cursor-grabbing pr-0"
         onMouseDown={e => {
           // Only start drag if not on selectable text
           if ((e.target as HTMLElement).closest('.selectable-text')) return;
@@ -139,7 +164,7 @@ const ScrollableMenuCards = forwardRef<ScrollableMenuRef, ScrollableMenuCardsPro
         {menuItems.map((item) => (
           <div 
             key={item.id} 
-            className="w-[300px] sm:w-[386px] text-black rounded-[12px] overflow-hidden flex-shrink-0"
+            className="w-[300px] sm:w-[386px] rounded-[12px] overflow-hidden flex-shrink-0"
           >
             {/* Card Image */}
             <div className="relative w-full cursor-grab active:cursor-grabbing" style={{ maxHeight: '239.99px', height: '239.99px' }}>
@@ -158,27 +183,67 @@ const ScrollableMenuCards = forwardRef<ScrollableMenuRef, ScrollableMenuCardsPro
                 style={{ borderRadius: '12px' }}
                 draggable={false}
               />
+
+              {/* overlays */}
+              <div className="absolute top-3 left-3 flex items-center gap-2">
+                <span className={`${isDarkCard ? 'bg-[rgba(176,12,19,0.85)] text-white' : 'bg-[rgba(176,12,19,0.12)] text-[var(--tt-brand-color-500,#B00C13)] border border-[rgba(176,12,19,0.25)]'} px-3 py-1 rounded-full text-xs font-semibold tracking-tight`}>
+                  {item.badge ?? 'Best Seller'}
+                </span>
+              </div>
+              <div className="absolute inset-x-0 bottom-0 h-16 bg-gradient-to-t from-black/45 to-transparent" />
             </div>
 
             {/* Card Content */}
-            <div className="mt-[-12px] z-10 relative bg-white rounded-[12px] pb-[12px] px-[16px]">
-              <div className="text-h5 font-bold py-3 selectable-text" style={{ cursor: "text", userSelect: "text" }}>{item.name}</div>
-              <div className="text-normal4 text-black/60 selectable-text" style={{ cursor: "text", userSelect: "text" }}>{item.description}</div>
-              {/* Price and Points */}
-              <div className="flex mt-1 items-center pb-3">
-                <span className="text-normal4 text-primary-dark font-bold selectable-text" style={{ cursor: "text", userSelect: "text" }}>$ {item.price}</span>
+            <div
+              className={`mt-[-12px] z-10 relative rounded-[12px] pb-[16px] pt-[10px] px-[16px] border ${isDarkCard ? 'bg-[#0d0d0d] border-[#1f1f1f] text-white shadow-[0_16px_40px_rgba(0,0,0,0.45)]' : 'bg-white border-black/5 text-black shadow-[0_16px_40px_rgba(0,0,0,0.06)]'}`}
+            >
+              <div className="flex items-start justify-between">
+                <div className={`text-[20px] font-semibold selectable-text`} style={{ cursor: "text", userSelect: "text", color: isDarkCard ? '#f5f5f5' : '#1f1f1f' }}>{item.name}</div>
+                <button 
+                  type="button" 
+                  aria-label="favorite" 
+                  className="p-1 text-[var(--tt-brand-color-500,#B00C13)] hover:opacity-80 transition-opacity"
+                  onClick={() => toggleFavorite(item.id)}
+                >
+                  <FavoriteStarIcon size={20} className="text-[var(--tt-brand-color-500,#B00C13)]" filled={favorites[item.id] ?? false} />
+                </button>
               </div>
-              {/* Tags */}
-              <div className="flex flex-wrap gap-2 mt-3">
-                {item.tags.map((tag, idx) => (
-                  <span 
-                    key={idx} 
-                    className={`text-normal4 px-[12px] py-[3px] rounded-full bg-black/[0.03] text-black/50 selectable-text`}
-                    style={{ cursor: "text", userSelect: "text" }}
-                  >
-                    {tag}
-                  </span>
-                ))}
+
+              <div className={`mt-1 text-[14px] font-semibold ${isDarkCard ? 'text-[var(--tt-brand-color-500,#B00C13)]' : 'text-[var(--tt-brand-color-500,#B00C13)]'}`}>
+                {item.priceM ? `M $ ${item.priceM.toFixed(2)}` : ''}
+                {item.priceM && item.priceL ? ' · ' : ''}
+                {item.priceL ? `L $ ${item.priceL.toFixed(2)}` : ''}
+                {(item.priceM || item.priceL) && item.points ? ' · ' : ''}
+                {(!item.priceM && !item.priceL) ? `$ ${item.price.toFixed(2)}` : ''}
+                {item.points ? `+${item.points} points` : ''}
+              </div>
+
+              <div className={`mt-2 text-[15px] selectable-text ${isDarkCard ? 'text-[#bfbfbf]' : 'text-black/70'}`} style={{ cursor: "text", userSelect: "text" }}>{item.description}</div>
+
+              <div className="mt-3">
+                <div className="flex flex-wrap gap-2">
+                  {item.tags.map((tag, idx) => (
+                    <span 
+                      key={idx} 
+                      className={`text-normal4 px-[12px] py-[6px] rounded-full selectable-text ${isDarkCard ? 'bg-[#1f1f1f] text-[#9c9c9c]' : 'bg-[rgba(176,12,19,0.08)] text-[rgba(60,60,60,1)] border border-[rgba(176,12,19,0.18)]'}`}
+                      style={{ cursor: "text", userSelect: "text" }}
+                    >
+                      {tag}
+                    </span>
+                  ))}
+                </div>
+              </div>
+
+              <div className="mt-4">
+                <button
+                  type="button"
+                  className={`${isDarkCard
+                    ? 'w-full inline-flex items-center justify-center gap-1 text-base text-white bg-[#1d1d1d] rounded-full px-4 py-3 hover:bg-[var(--tt-brand-color-500,#B00C13)] hover:text-white transition-colors'
+                    : 'w-full inline-flex items-center justify-center gap-1 text-base text-[var(--tt-brand-color-500,#B00C13)] bg-[rgba(176,12,19,0.06)] rounded-full px-4 py-3 hover:bg-[var(--tt-brand-color-500,#B00C13)] hover:text-white transition-colors'
+                  }`}
+                >
+                  Read More
+                </button>
               </div>
             </div>
           </div>

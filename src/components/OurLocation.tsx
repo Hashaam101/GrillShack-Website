@@ -8,25 +8,25 @@ import React from 'react';
 const LocationComponent = () => {
 
   const locationData = {
-    title: "Kapuni St, Honolulu",
-    subtitle: "Waikiki Chicken In Paradise",
-    mapQuery: "Waikiki Chicken In Paradise, 208a Kapuni St, Honolulu, HI 96815, United States",
+    title: "119 Falling Ln, West Drayton",
+    subtitle: "Grill Shack",
+    mapQuery: "Grill Shack, 119 Falling Ln, West Drayton",
     contact: {
-      phone: "(808) 219-5749",
-      email: "email@email.com"
+      phone: "+44 1895 913672",
+      email: "info@grillshack.co.uk"
     },
     openingTime: "Timing",
     extraInfo: "",
     actionLinkDirections: {
       text: "Get Directions",
-      url: "https://maps.google.com/?q=Waikiki Chicken In Paradise, 208a Kapuni St, Honolulu, HI 96815, United States"
+      url: "https://maps.google.com/?q=Grill Shack, 119 Falling Ln, West Drayton UB7 8AG, United Kingdom"
     },
     actionLinkContact: {
       text: "Contact",
-      url: "https://maps.google.com/?q=Waikiki Chicken In Paradise, 208a Kapuni St, Honolulu, HI 96815, United States"
+      url: "https://maps.google.com/?q=Grill Shack, 119 Falling Ln, West Drayton UB7 8AG, United Kingdom"
     },
     openingHours: [
-      { day: "Daily   -----------", hours: "11:00 AM – 9:00 PM" }
+      { day: "Daily   -----------", hours: "11:30AM – 12AM" }
     ]
   };
 
@@ -62,7 +62,7 @@ const LocationComponent = () => {
         {/* Overlay Container (desktop only) */}
         <div className="hidden absolute inset-0 z-20 p-[16px] md:flex flex-wrap justify-between pointer-events-none">
           <div className='flex flex-col gap-2'>
-            <div className="flex flex-col h-fit w-[264px] px-[24px] py-[21px] items-start gap-[10px] self-stretch rounded-[30px] border-primary-dark/25 border bg-white/40 shadow-black/15 shadow-[6px] backdrop-blur-[14px] z-99">
+            <div className="flex flex-col h-fit w-[264px] px-[24px] py-[21px] items-start gap-[10px] self-stretch rounded-[30px] border-black/25 border bg-white/40 shadow-black/15 shadow-[6px] backdrop-blur-[14px] z-99">
               <div>
                 {locationData.title && <div className="text-normal2 font-medium text-black/50">{locationData.title}</div>}
                 <p className="text-normal2 font-medium text-black">{locationData.subtitle}</p>
@@ -78,7 +78,7 @@ const LocationComponent = () => {
                 </button>
               </div>
             </div>
-            <div className="flex flex-col h-fit w-[220px] px-[24px] py-[21px] items-start gap-[10px] self-stretch rounded-[30px] border-primary-dark/25 border bg-white/40 shadow-black/15 shadow-[6px] backdrop-blur-[14px]">
+            <div className="flex flex-col h-fit w-[220px] px-[24px] py-[21px] items-start gap-[10px] self-stretch rounded-[30px] border-black/25 border bg-white/40 shadow-black/15 shadow-[6px] backdrop-blur-[14px]">
               <div>
                 <div className='text-normal4 text-black/50'>Address</div>
                 <div className='text-normal4 text-black leading-[24px] mb-[10px]'>
@@ -93,7 +93,7 @@ const LocationComponent = () => {
               </div>
             </div>
           </div>
-          <div className="flex flex-col h-fit w-[264px] px-[24px] py-[21px] items-end gap-[10px] self-stretch rounded-[30px] border-primary-dark/25 border bg-white/40 shadow-black/15 shadow-[6px] backdrop-blur-[14px]">
+          <div className="flex flex-col h-fit w-[264px] px-[24px] py-[21px] items-end gap-[10px] self-stretch rounded-[30px] border-black/25 border bg-white/40 shadow-black/15 shadow-[6px] backdrop-blur-[14px]">
             <div className="w-full">
               <h4 className="text-normal4 font-medium text-center text-gray-800 mb-2">Timings</h4>
               <div className="">

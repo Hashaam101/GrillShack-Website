@@ -4,7 +4,7 @@ import React from "react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import MediaPreloader from "@/components/MediaPreloader";
-import Hero from "@/../public/Images/hero.webp";
+import Hero from "@/../public/Images/hero.png";
 import ThemeButton from "@/components/ThemeBtn";
 import Home_menu_section from "@/components/Home_menu_section";
 import InstagramComponent from "@/components/InstagramComponent";
@@ -40,45 +40,35 @@ const Home = React.memo(function Home() {
       <div className="sm:h-[20px]" />
 
   {/* hero img section */}
-  <div id="Home" className="h-[550px] sm:h-[500px] w-full overflow-hidden rounded-[36px] relative">
-        <div className="px-[20px] pb-8 sm:px-[40px] h-full flex flex-col items-start justify-end gap-2.5 bg-black/55 backdrop-blur-[13px]">
-          <div className="text-[var(--tt-color-text-gray)] opacity-80 text-normal1 sm:text-normal2 sm:font-bold border-l-3 border-primary-dark pl-[20px]">
+  <div id="Home" className="h-[650px] sm:h-[500px] w-full relative overflow-visible flex flex-row items-center">
+        {/* Hero background image */}
+        <img
+          src={typeof Hero === "string" ? Hero : (Hero.src ?? "")}
+          alt="Home Page Image"
+          className="absolute pt-4 mr-[-10px] right-0 h-[125%] -z-10"
+        />
+        <div className="pl-[60px] pb-8 flex flex-col items-start justify-center gap-2.5 relative z-10">
+          <div className="text-normal1 sm:text-normal2 sm:font-bold border-l-3 border-primary-dark pl-[20px]">
             Serving the Best Fried Chicken in Waikiki
           </div>
-          <div className="text-[var(--tt-color-text-gray)] font-creato-black font-semibold text-[32px] sm:text-h2 lg:text-h1  sm:font-medium leading-[1.2]">
-            Fresh, juicy chicken
+          <div className="text-[32px] sm:text-h2 lg:text-h1 sm:font-medium leading-[1.2]" style={{fontFamily: 'var(--font-southern-barn)'}}>
+            Savor the Best
             <br />
-            and island flavors&nbsp;
-            <br className="hidden md:block" />
-            just steps from Waikiki Beach!
+            Fast Food in
+            <br />
+            West Drayton –
+            <br />
+            Authentic and Flavorful!
             <br />
           </div>
-          {/* Preloader for hero image */}
-          <MediaPreloader
-            src={typeof Hero === "string" ? Hero : (Hero.src ?? "")}
-            alt="Home Page Image"
-            className="absolute top-0 left-0 w-full h-full object-cover rounded-[36px] -z-10"
-            onLoaded={() => setHeroLoaded(true)}
-          />
-          {/* Only show overlays if heroLoaded */}
-          {heroLoaded && (
-            <>
-              <div className="absolute bg-black/20 top-0 left-0 w-full h-full object-cover rounded-[36px] -z-9" />
-              <div className="absolute top-0 left-0 w-full h-full object-cover rounded-[36px] -z-9"
-                style={{
-                  background: "linear-gradient(59deg, rgb(13 13 13 / 30%) 20%, rgb(13 13 13 / 20%) 40%, rgb(13 13 13 / 15%) 60%, rgba(0, 0, 0, 0) 100%)"
-                }}
-              />
-            </>
-          )}
         </div>
-      </div>
+      </div>  
 
       <div className="h-[100px]" />
 
       {/* section 2 */}
       <div id="Menu" className="w-full flex items-center justify-center text-center flex-col">
-        <div className="text-h3 sm:text-h2 text-[var(--tt-color-text-gray)] w-full">
+        <div className="text-h3 sm:text-h2 w-full">
           Try our most popular items
         </div>
         <div className="text-normal mt-[20px]" style={{ color: 'var(--tt-color-text-gray)' }}>
@@ -87,9 +77,9 @@ const Home = React.memo(function Home() {
         <div className="mt-[20px] gap-[20px] flex flex-col sm:flex-row items-center justify-center">
           <ThemeButton
             text="Get Directions"
-            href="https://maps.app.goo.gl/zZErazVdPgZMqJLeA"
+            href="https://share.google/802y7XFGGWC7hiIxT"
             textClassname="pr-[8px] pl-[14px] text-white"
-            className="bg-primary-dark border-2 hover:bg-primary border-primary-dark hover:border-primary transition-colors"
+            className="bg-primary-dark border-2 hover:bg-primary-dark/90 border-primary-dark hover:border-primary-dark/90 transition-colors"
           />
 
           <ThemeButton

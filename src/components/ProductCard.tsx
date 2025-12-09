@@ -15,14 +15,14 @@ export default function ProductCard({ product, measureHeights }: Props) {
       key={product.id}
       className="menu-card rounded-2xl overflow-hidden flex flex-col bg-primary/50 shadow-xl shadow-black/30 max-w-[340px] sm:max-w-[360px] w-full mx-auto"
     >
-      <div className="relative w-full rounded-t-2xl overflow-hidden" style={{ maxHeight: '220px', height: '220px' }}>
+      <div className="relative w-full rounded-t-2xl overflow-hidden" style={{ maxHeight: '220px', height: '220px', color: 'var(--tt-card-bg-color)' }}>
         <Image src={product.image} alt={product.name} fill className="object-cover" onLoad={() => measureHeights()} />
       </div>
 
       <div className="flex flex-col flex-1 px-4 pt-4 pb-4">
-        <div className="flex items-start justify-between gap-3">
-          <div className="font-bold text-white text-[18px] leading-tight">{product.name}</div>
-          <div className="font-bold text-white text-[18px]">$ {product.price}</div>
+        <div className="flex items-start justify-between">
+          <div className="font-bold text-[18px] leading-tight" style={{ color: 'var(--tt-card-bg-color)' }}>{product.name}</div>
+          <div className="font-bold text-[18px]">$ {product.price}</div>
         </div>
         <div className="mt-2 text-sm" style={{ color: '#d0c6bb' }}>{product.description}</div>
       </div>

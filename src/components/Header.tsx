@@ -2,7 +2,7 @@
 
 import React, { useState } from 'react';
 import { AnimatedCTAButton } from './CTA_header_btn';
-import logo from "@/assets/Images/Logo.webp";
+import logo from "@/assets/Images/Logo.png";
 import Image from 'next/image';
 import { AnimatedMenuButton } from './Menu_Header_btn';
 import { usePathname, useRouter } from 'next/navigation';
@@ -74,7 +74,7 @@ function Header( {onClick} : {onClick: () => void}) {
             />
             <Image
               src={logo}
-              alt="Waikiki Chicken In Paradise Logo"
+              alt="Grill Shack Logo"
               width={70}
               height={70}
               className="object-cover rounded-full"

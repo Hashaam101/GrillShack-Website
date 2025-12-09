@@ -1,14 +1,14 @@
 import React from "react";
 import Image from "next/image";
-import Logo from "@/assets/Images/Logo.webp";
+import Logo from "@/assets/Images/Logo.png";
 
 const Footer = ({ scrollToSection }: { scrollToSection?: (sectionId: string) => void }) => (
     <footer className="w-full px-[10px] md:px-[50px] lg:px-[70px] pb-[20px] sm:pb-[10px]" style={{ background: 'var(--tt-bg-color)', color: 'var(--tt-color-text-gray)' }}>
         <div className="text-h3 sm:text-h2 w-full">
-            Waikiki Chicken In Paradise
+            Grill Shack
         </div>
         <div className="mb-[32px] mx-2 text-normal2">
-            Enjoy crispy, island-style fried chicken made fresh daily in the heart of Waikiki. From quick bites to catering, Waikiki Chicken in Paradise brings flavor and aloha to every meal.
+            Enjoy crispy, island-style fried chicken made fresh daily in the heart of Waikiki. From quick bites to catering, Grill Shack brings flavor and aloha to every meal.
         </div>
         <div className="container mx-auto">
             <div className="grid grid-cols-1 sm:grid-cols-2 min-h-[100px] lg:grid-cols-3 gap-[10px] lg:gap-8">
@@ -16,14 +16,14 @@ const Footer = ({ scrollToSection }: { scrollToSection?: (sectionId: string) => 
                 <div className="col-span-2 lg:col-span-1 mx-auto flex flex-row items-center lg:items-start gap-4">
                     <Image
                         src={Logo}
-                        alt="Waikiki Chicken In Paradise Logo"
+                        alt="Grill Shack Logo"
                         width={100}
                         height={100}
                         className="object-contain w-auto h-[200px] md:h-[230px] aspect-square rounded-full"
                     />
                     <div className="flex h-[120px] justify-evenly gap-[10px] flex-col my-auto max-w-100">
                         <a
-                            href="https://www.instagram.com/waikikichickeninparadise/"
+                            href="https://www.instagram.com/grilll_shack"
                             aria-label="Instagram"
                             className="min-w-[100px] p-2 py-4 h-full w-full items-center justify-center flex rounded-lg group transition-all"
                             style={{ background: 'color-mix(in oklab, var(--color-white) 5%, transparent)' }}
@@ -63,21 +63,15 @@ const Footer = ({ scrollToSection }: { scrollToSection?: (sectionId: string) => 
                             </svg>
                         </a>
                         <a
-                            href="https://www.yelp.com/biz/waikiki-chicken-in-paradise-honolulu"
-                            aria-label="Yelp"
+                            href="https://www.tiktok.com/@grill_shack"
+                            aria-label="TikTok"
                             className="p-2 py-4 h-full w-full items-center justify-center flex rounded-lg group transition-all"
                             style={{ background: 'color-mix(in oklab, var(--color-white) 5%, transparent)' }}
                             onMouseEnter={e => e.currentTarget.style.background = 'color-mix(in oklab, black 30%, transparent)'}
                             onMouseLeave={e => e.currentTarget.style.background = 'color-mix(in oklab, var(--color-white) 5%, transparent)'}
                         >
-                            <svg height="22" width="22" viewBox="0 0 228.097 228.097" xmlns="http://www.w3.org/2000/svg" style={{ color: 'var(--tt-color-text-gray)' }}>
-                                <g>
-                                    <path fill="currentColor" className="fill-opacity-60 group-hover:fill-[#C1272D] group-hover:fill-opacity-100 transition-all" d="M173.22,68.06c8.204,6.784,30.709,25.392,27.042,38.455c-1.696,5.867-8.434,7.746-13.43,9.579c-11.505,4.171-23.33,7.471-35.339,9.9c-9.717,1.971-30.48,6.279-26.63-10.909c1.512-6.646,6.875-12.284,11.184-17.28c8.846-10.404,17.876-21.405,28.555-29.93c0.871-0.688,1.925-0.871,2.842-0.733C169.232,66.41,171.386,66.502,173.22,68.06z" />
-                                    <path fill="currentColor" className="fill-opacity-60 group-hover:fill-[#C1272D] group-hover:fill-opacity-100 transition-all" d="M161.119,205.197c-7.196-5.821-12.284-14.942-16.684-22.917c-4.309-7.7-11.092-17.876-12.238-26.813c-2.337-18.38,24.292-7.333,31.947-4.675c10.175,3.575,37.447,7.517,34.422,23.421c-2.521,12.971-18.151,28.784-31.213,30.801c-0.137,0.046-0.321,0-0.504,0c-0.046,0.046-0.092,0.092-0.137,0.137c-0.367,0.183-0.779,0.413-1.192,0.596C163.961,206.573,162.449,206.252,161.119,205.197z" />
-                                    <path fill="currentColor" className="fill-opacity-60 group-hover:fill-[#C1272D] group-hover:fill-opacity-100 transition-all" d="M101.58,157.896c14.484-6.004,15.813,10.175,15.721,19.984c-0.137,11.688-0.504,23.421-1.375,35.063c-0.321,4.721-0.137,10.405-4.629,13.384c-5.546,3.667-16.225,0.779-21.955-1.008c-0.183-0.092-0.367-0.183-0.55-0.229c-12.054-2.108-26.767-7.654-28.188-18.792c-0.138-1.283,0.367-2.429,1.146-3.3c0.367-0.688,0.733-1.329,1.146-1.925c1.788-2.475,3.85-4.675,5.913-6.921c3.483-5.179,7.242-10.175,11.229-14.988C85.813,172.197,92.917,161.471,101.58,157.896z" />
-                                    <path fill="currentColor" className="fill-opacity-60 group-hover:fill-[#C1272D] group-hover:fill-opacity-100 transition-all" d="M103.689,107.661c-21.13-17.371-41.71-44.276-52.344-69.164c-8.113-18.93,12.513-30.48,28.417-35.705c21.451-7.059,29.976-0.917,32.13,20.534c1.788,18.471,2.613,37.08,2.475,55.643c-0.046,7.838,2.154,20.488-2.429,27.547c0.733,2.888-3.621,4.95-6.096,2.979c-0.367-0.275-0.733-0.642-1.146-0.963C104.33,108.303,104.009,108.028,103.689,107.661z" />
-                                    <path fill="currentColor" className="fill-opacity-60 group-hover:fill-[#C1272D] group-hover:fill-opacity-100 transition-all" d="M101.397,134.566c1.696,7.517-3.621,10.542-9.854,13.384c-11.092,4.996-22.734,8.984-34.422,12.284c-6.784,1.879-17.188,6.371-23.742,1.375c-4.95-3.758-5.271-11.596-5.729-17.28c-1.008-12.696,0.917-42.993,18.517-44.276c8.617-0.596,19.388,7.104,26.447,11.138c9.396,5.409,19.48,11.596,26.492,20.076C100.159,131.862,101.03,132.916,101.397,134.566z" />
-                                </g>
+                            <svg height="22" width="22" viewBox="0 0 27 28" xmlns="http://www.w3.org/2000/svg" style={{ color: 'var(--tt-color-text-gray)' }}>
+                                <path fill="currentColor" className="fill-opacity-60 group-hover:fill-[#C1272D] group-hover:fill-opacity-100 transition-all" d="M16.656 1.029c1.637-0.025 3.262-0.012 4.886-0.025 0.054 2.031 0.878 3.859 2.189 5.213l-0.002-0.002c1.411 1.271 3.247 2.095 5.271 2.235l0.028 0.002v5.036c-1.912-0.048-3.71-0.489-5.331-1.247l0.082 0.034c-0.784-0.377-1.447-0.764-2.077-1.196l0.052 0.034c-0.012 3.649 0.012 7.298-0.025 10.934-0.103 1.853-0.719 3.543-1.707 4.954l0.020-0.031c-1.652 2.366-4.328 3.919-7.371 4.011l-0.014 0c-0.123 0.006-0.268 0.009-0.414 0.009-1.73 0-3.347-0.482-4.725-1.319l0.040 0.023c-2.508-1.509-4.238-4.091-4.558-7.094l-0.004-0.041c-0.025-0.625-0.037-1.25-0.012-1.862 0.49-4.779 4.494-8.476 9.361-8.476 0.547 0 1.083 0.047 1.604 0.136l-0.056-0.008c0.025 1.849-0.050 3.699-0.050 5.548-0.423-0.153-0.911-0.242-1.42-0.242-1.868 0-3.457 1.194-4.045 2.861l-0.009 0.030c-0.133 0.427-0.21 0.918-0.21 1.426 0 0.206 0.013 0.41 0.037 0.61l-0.002-0.024c0.332 2.046 2.086 3.59 4.201 3.59 0.061 0 0.121-0.001 0.181-0.004l-0.009 0c1.463-0.044 2.733-0.831 3.451-1.994l0.010-0.018c0.267-0.372 0.45-0.822 0.511-1.311l0.001-0.014c0.125-2.237 0.075-4.461 0.087-6.698 0.012-5.036-0.012-10.060 0.025-15.083z"/>
                             </svg>
                         </a>
                     </div>
@@ -86,20 +80,20 @@ const Footer = ({ scrollToSection }: { scrollToSection?: (sectionId: string) => 
                     {/* Contact Us */}
                     <div className="col-span-1 text-center h-full lg:mr-10 mr-0">
                         <div className="flex h-full flex-col items-center justify-center">
-                            <div className="text-h5 font-semibold mb-[22px] text-[var(--tt-color-text-gray)]">Contact Us</div>
+                            <div className="text-h5 font-semibold mb-[22px] text-[var(--white)]">Contact Us</div>
                             <div className="text-normal4 text-[var(--tt-color-text-gray)]">
                                 <div className="flex flex-col items-center">
                                     <a
-                                        href="tel:+18434788609"
+                                        href="tel:+441895913672"
                                         className="mb-[10px] hover:text-primary hover:underline cursor-pointer transition-colors"
                                     >
-                                        +1 (843) 478-8609
+                                        +44 1895 913672
                                     </a>
                                     <a
-                                        href="mailto:chickeninparadise96815@gmail.com"
+                                        href="mailto:info@grillshack.co.uk"
                                         className="hover:text-primary hover:underline cursor-pointer transition-colors"
                                     >
-                                        chickeninparadise96815@gmail.com
+                                        info@grillshack.co.uk
                                     </a>
                                 </div>
                             </div>
@@ -108,7 +102,7 @@ const Footer = ({ scrollToSection }: { scrollToSection?: (sectionId: string) => 
                     {/* Quick Links */}
                     <div className="col-span-1 text-center h-full ">
                         <div className="flex h-full flex-col items-center justify-center">
-                            <div className="text-h5 font-semibold mb-[22px] text-[var(--tt-color-text-gray)]">
+                            <div className="text-h5 text-[var(--white)] font-semibold mb-[22px]">
                                 Quick Links
                             </div>
                             <div className="text-normal4 text-[var(--tt-color-text-gray)]">
@@ -143,7 +137,7 @@ const Footer = ({ scrollToSection }: { scrollToSection?: (sectionId: string) => 
         <div className="bg-primary rounded-full text-white w-[90%] mx-auto min-h-[37px] py-[10px] sm:px-[50px] md:px-[100px] ">
             <div className="container mx-auto flex flex-col sm:flex-row justify-between items-center text-center text-normal4 gap-[20px]">
                 <p className="hidden sm:block">
-                    Waikiki Chicken In Paradise Inc. 2025 All Rights Reserved
+                    Grill Shack Inc. 2025 All Rights Reserved
                 </p>
                 <p className="text-nowrap">
                     Made with <a target="_blank" href="http://tableturnerr.com" className="hover:underline cursor-pointer"><u>TableTurnerr.com</u></a>
@@ -151,7 +145,7 @@ const Footer = ({ scrollToSection }: { scrollToSection?: (sectionId: string) => 
             </div>
         </div>
         <div className="block sm:hidden w-full text-center text-[10px] mt-2">
-            Waikiki Chicken In Paradise Inc. 2025 All Rights Reserved
+            Grill Shack Inc. 2025 All Rights Reserved
         </div>
     </footer>
 );

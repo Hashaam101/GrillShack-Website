@@ -3,9 +3,17 @@ export type Product = {
   name: string;
   image: string; // path starting with "/" relative to public/
   price: number;
+  priceM?: number;
+  priceL?: number;
+  points?: number;
   description: string;
   tags: string[];
   showOnHomepage?: boolean;
+  rating?: number; // optional rating value
+  reviewsCount?: number; // optional review count
+  badge?: string; // optional badge label (e.g., Best Seller)
+  starred?: boolean; // highlights the badge/icon
+  calories?: string; // optional calorie or serving info
 };
 
 export const products: Product[] = [

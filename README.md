@@ -1,10 +1,10 @@
 ## Project Origin
 
-This website was initially cloned from Sun Tea's site {which is based on TableTurnerr's Stack Website}, but it is now the official website for Waikiki Chicken In Paradise.
+This website was initially cloned from Sun Tea's site {which is based on TableTurnerr's Stack Website}, but it is now the official website for Grill Shack.
 
-# Waikiki Chicken In Paradise Website
+# Grill Shack Website
 
-This site is now the official website for **Waikiki Chicken In Paradise**, a client of TableTurnerr. It is a modern, responsive web app built with Next.js and Tailwind CSS.
+This site is now the official website for **Grill Shack**, a client of TableTurnerr. It is a modern, responsive web app built with Next.js and Tailwind CSS.
 
 
 ## Features & Sections

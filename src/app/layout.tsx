@@ -17,7 +17,7 @@ const geistMono = Geist_Mono({
 // --- METADATA STAYS HERE ---
 export const metadata: Metadata = {
   metadataBase: new URL("https://waikikichickeninparadise.com"),
-  title: "Waikiki Chicken In Paradise | Best Fried Chicken Waikiki Beach",
+  title: "Grill Shack | Best Fried Chicken Waikiki Beach",
   description: "Serving the Best Fried Chicken in Waikiki. Fresh, juicy chicken and island flavors just steps from Waikiki Beach! Try our most popular items and see why everyone in Honolulu is talking about us.",
   keywords: [
     "fried chicken", "waikiki chicken", "fish and chips", "food truck waikiki", "Restaurant" , "fast food waikiki", "best fried chicken honolulu", "crispy chicken sandwich", "loaded fries", "hawaiian flavors", "dine-in", "take away", "reservations", "waikiki beach", "honolulu food truck"
@@ -27,16 +27,16 @@ export const metadata: Metadata = {
     follow: true,
   },
   openGraph: {
-    title: "Waikiki Chicken In Paradise | Best Fried Chicken Waikiki Beach",
+    title: "Grill Shack | Best Fried Chicken Waikiki Beach",
     description: "Serving the Best Fried Chicken in Waikiki. Fresh, juicy chicken and island flavors just steps from Waikiki Beach! Try our most popular items and see why everyone in Honolulu is talking about us.",
     url: "https://waikikichickeninparadise.com/",
-    siteName: "Waikiki Chicken In Paradise",
+    siteName: "Grill Shack",
     images: [
       {
-        url: "/Images/Logo.webp",
+        url: "/Images/Logo.png",
         width: 400,
         height: 400,
-        alt: "Waikiki Chicken In Paradise Logo"
+        alt: "Grill Shack Logo"
       }
     ],
     locale: "en_US",
@@ -45,9 +45,9 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     site: "https://waikikichickeninparadise.com/",
-    title: "Waikiki Chicken In Paradise | Fried Chicken | Fish & Chips | Fast Food | Food Truck Waikiki",
+    title: "Grill Shack | Fried Chicken | Fish & Chips | Fast Food | Food Truck Waikiki",
     description: "Serving the Best Fried Chicken in Waikiki. Fresh, juicy chicken and island flavors just steps from Waikiki Beach! Try our most popular items and see why everyone in Honolulu is talking about us.",
-    images: ["/Images/Logo.webp"]
+    images: ["/Images/Logo.png"]
   }
 };
 // --- END METADATA ---

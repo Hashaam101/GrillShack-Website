@@ -51,7 +51,7 @@ const MenuPage = React.memo(function MenuPage() {
       {/* hero section */}
       <div id="MenuHero" className="h-[320px] sm:h-[380px] md:h-[420px] w-full overflow-hidden rounded-[36px] relative">
         <div className="px-[20px] pb-8 sm:px-[40px] h-full flex flex-col items-start justify-end gap-2.5 bg-black/55 backdrop-blur-[13px]">
-          <div className="text-[var(--tt-color-text-gray)] opacity-80 text-normal1 sm:text-normal2 sm:font-bold border-l-3 border-primary-dark pl-[20px]">
+          <div className="text-[var(--tt-color-text-gray)] text-normal1 sm:text-normal2 sm:font-bold border-l-3 border-primary-dark pl-[20px]">
             Explore Our Full Menu
           </div>
           <div className="text-[var(--tt-color-text-gray)] font-creato-black font-semibold text-[32px] sm:text-h2  sm:font-medium leading-[1.2]">

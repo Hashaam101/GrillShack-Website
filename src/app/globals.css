@@ -44,12 +44,20 @@
   font-style: normal;
 }
 
+@font-face {
+  font-family: "SouthernBarn";
+  src: url("@/../../../public/Fonts/Southern\ Barn.otf") format("opentype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+
 @utility no-scrollbar {
   @apply [scrollbar-width:none] [&::-webkit-scrollbar]:hidden;
 }
 
 @theme {
-  --color-primary-dark: #C92F2F;
+  --color-primary-dark: #B00C13;
   --color-primary: #FF2B30;
   --color-black: #0D0D0D;
   --color-grey: #4D4D4D;
@@ -63,7 +71,7 @@
   --text-h4: 36px;
   --text-h5: 22px;
 
-  --text-normal1: 20px;
+  --text-normal1: 18px;
   --text-normal2: 18px;
   --text-normal3: 16px;
   --text-normal4: 14px;
@@ -78,6 +86,7 @@
   --default-font-family:"CretoDispay";
   --font-creato-black:"CretoDispay Black";
   --font-not-east:"Not the far east";
+  --font-southern-barn:"SouthernBarn";
   --leading-normal: 1.2;
 }
 
@@ -87,8 +96,19 @@
     font-weight: 500;
     overflow-y: auto !important;
     background: var(--tt-bg-color);
-    color: var(--tt-color-text-gray);
-  cursor: auto;
+    color: var(--white);
+    cursor: auto;
+  }
+  .text-h3, .text-h2 {
+    font-family: var(--font-southern-barn);
+  }
+  .text-h1, .text-h2, .text-h3, .text-h4 {  
+    color: var(--white);
+  }
+
+  .text-normal {
+  font-family: var(--default-font-family);
+  color: var(--tt-color-text-gray);
   }
 
   a, button, [role="button"], input[type="submit"], input[type="button"],

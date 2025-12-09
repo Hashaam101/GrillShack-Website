@@ -4,7 +4,7 @@ const FAQSection = () => {
   // Sample FAQ data
   const faqItems = [
     {
-      question: "Where is Waikiki Chicken In Paradise located?",
+      question: "Where is Grill Shack located?",
       answer: "Our food truck is conveniently situated near Waikiki Beach, offering easy access for beachgoers and tourists."
     },
     {

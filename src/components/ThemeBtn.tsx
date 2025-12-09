@@ -47,7 +47,7 @@ const ThemeButton: React.FC<ThemeButtonProps> = ({
 
     // Define the common visual content
     const buttonContent = (
-    <div className={`group ${className} border ${borderColor} hover:scale-105 shadow-lg hover:shadow-xl rounded-[9px] min-w-[157px] min-h-[41px] w-fit overflow-hidden flex bg-primary-dark hover:bg-primary transition-all duration-200 items-center ${borderHoverColor}`}>
+    <div className={`group ${className} border ${borderColor} hover:scale-105 shadow-lg hover:shadow-xl rounded-[9px] min-w-[157px] min-h-[41px] w-fit overflow-hidden flex transition-all duration-200 items-center ${borderHoverColor}`}>
             <div className={`text-nowrap text-normal2 font-bold ${textColor} ${textClassname} mx-auto h-full flex items-center justify-center`}>
                 {text}
             </div>

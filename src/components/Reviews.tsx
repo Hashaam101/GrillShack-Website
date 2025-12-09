@@ -7,7 +7,7 @@ import ReviewPopup from './ReviewPopup';
 import { useState } from 'react';
 
 // Google review URL used in both Reviews and ReviewPopup
-export const GOOGLE_REVIEW_URL = "https://search.google.com/local/writereview?placeid=ChIJCeDZi7pzAHwR2-opn5R1-Is";
+export const GOOGLE_REVIEW_URL = "https://search.google.com/local/writereview?placeid=ChIJF69duAdtdkgRWGtA5_bwbtI";
 
 const Reviews = () => {
     const [showPopup, setShowPopup] = useState(false);
@@ -51,8 +51,7 @@ const Reviews = () => {
             >
 
                 <div>
-                    <div className="
-            text-center text-h2 sm:text-h3 md:text-h2 text-white w-full">
+                    <div className="text-center text-h2 sm:text-h3 md:text-h2 text-white w-full">
                         What our Customers are Saying
                     </div>
 
@@ -65,29 +64,31 @@ const Reviews = () => {
                 </div>
 
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+
                     <ReviewCard
                         starCount={5}
-                        reviewText="Great food, delicious crispy chicken (tried the sando and chicken curry). Both recommended. Hawaiian pineapple hotdog was a perfect balance of spicy and sweet! Very satisfying!"
-                        reviewerName="Anzonette Pittet"
-                        redirect="https://maps.app.goo.gl/6VQi5GkTPUhaH7Q67"
-                        profileImage="https://lh3.googleusercontent.com/a-/ALV-UjXVju4wT3qwJoEJjmSEZJ1B6gMFVQDQHWs5dwxpbVxTCNAGA5gcYg=w49-h49-p-rp-mo-ba2-br100"
+                        reviewText="Found this place through tiktok and honestly one of the best boxes i’ve ever had. mint sauce was phenomenal, meat was clean and so was all the other food. would personally say that the hot wings were better than the lemon. can’t say anything bad about this place and the owner was lovely. will come again."
+                        reviewerName="Jasmina Ali"
+                        redirect='https://share.google/FwksR0ig96JNu6ECO'
+                        profileImage="https://lh3.googleusercontent.com/a/ACg8ocJ2aaQFht3Pf9g7ZQ0FoK5LUNUIHKjetjsRZRaJ6mmkCkepWA=s64-c-rp-mo-br100"
                     />
 
                     <ReviewCard
                         starCount={5}
-                        reviewText="Tried the Fried Chicken Sando and was blown away by the flavors. The radish pickles gave it a tangy crunch, and I picked the Pineapple Ginger sauce super unique and refreshing! The portion was generous."
-                        reviewerName="Nat View"
-                        redirect='https://maps.app.goo.gl/nnxk38NXfxj8S6nR8'
-                        profileImage="https://lh3.googleusercontent.com/a-/ALV-UjVZp7V7rCzpDKb7KvtQTJxMhPI-Quvk7QvzuQzwBj2pJpM4tWBB=w49-h49-p-rp-mo-ba3-br100"
+                        reviewText="The food was absolutely incredible—probably the best burger I’ve ever had! The staff were not only kind but also genuinely amazing, which made the whole experience even better."
+                        reviewerName="Hudheifa Anverdeen"
+                        redirect="https://share.google/LaGRkcgzRKXrpdsr2"
+                        profileImage="https://lh3.googleusercontent.com/a-/ALV-UjU9_NwtsgqsVEkxm-UU3As7RjVnVWJ38Gm2UJjKK3nHoN6WzPh3=s64-c-rp-mo-br100"
                     />
 
                     <ReviewCard
                         starCount={5}
-                        reviewText="I got the loco moco fried chicken plate. The salad was tasty; the chicken was crispy outside and soft inside; the egg was perfect. Our food came in a reasonable amount of time. The gravy was amazing."
-                        reviewerName="Patt Promsit"
-                        redirect='https://maps.app.goo.gl/EJkBnjWVj5Hf9nnf7'
-                        profileImage="https://lh3.googleusercontent.com/a-/ALV-UjXGwFtBMZLbY2NUv0qTojknmbOWcb_h8L4pqAuYtajzDfQIK_s=w49-h49-p-rp-mo-br100"
+                        reviewText="I ordered the Smash Doner Box for myself earlier on today and It was certainly worth the hype. Will come back to order another time. 10/10 On the Food."
+                        reviewerName="Daz Ahmed"
+                        redirect='https://share.google/pOgOE8Kc1tHPPJ64a'
+                        profileImage="https://lh3.googleusercontent.com/a-/ALV-UjWkiplcIP5BtPY9mzaDr9xIUnEYhxdQanjIzelTcU_CdFQOSTU=s64-c-rp-mo-br100"
                     />
+
                 </div>
 
                 <div className='z-10'>
