@@ -6,7 +6,7 @@ import Footer from "@/components/Footer";
 import MediaPreloader from "@/components/MediaPreloader";
 import Hero from "@/../public/Images/hero.png";
 import ThemeButton from "@/components/ThemeBtn";
-import Home_menu_section from "@/components/Home_menu_section";
+import MenuSection from "@/components/MenuSection";
 import InstagramComponent from "@/components/InstagramComponent";
 import Reviews from "@/components/Reviews";
 import FAQSection from "@/components/FAQ_section";
@@ -103,7 +103,7 @@ const Home = React.memo(function Home() {
       {/* Menu Section */}
 
       <div>
-        <Home_menu_section />
+        <MenuSection/>
       </div>
 
 

@@ -3,37 +3,14 @@
 import React from "react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import MenuSection from "@/components/MenuSection";
 import MediaPreloader from "@/components/MediaPreloader";
 import HeroImg from "@/../public/Images/hero.webp";
 import { products } from "@/data/products";
 import Image from "next/image";
-import ProductCard from '@/components/ProductCard';
 
 const MenuPage = React.memo(function MenuPage() {
   const [heroLoaded, setHeroLoaded] = React.useState(false);
-  const [maxCardHeight, setMaxCardHeight] = React.useState<number | null>(null);
-  const gridRef = React.useRef<HTMLDivElement | null>(null);
-
-  const measureHeights = React.useCallback(() => {
-    const node = gridRef.current;
-    if (!node) return;
-    const cards = node.querySelectorAll<HTMLDivElement>('div.menu-card');
-    if (!cards.length) return;
-    const maxH = Array.from(cards).reduce((max, el) => Math.max(max, el.getBoundingClientRect().height), 0);
-    setMaxCardHeight(maxH);
-  }, []);
-
-  React.useEffect(() => {
-    // Measure on mount and on resize
-    measureHeights();
-    const raf = requestAnimationFrame(measureHeights);
-    const onResize = () => measureHeights();
-    window.addEventListener('resize', onResize);
-    return () => {
-      cancelAnimationFrame(raf);
-      window.removeEventListener('resize', onResize);
-    };
-  }, [measureHeights]);
 
 
   const scrollToSection = (sectionId: string) => {
@@ -81,34 +58,9 @@ const MenuPage = React.memo(function MenuPage() {
         </div>
       </div>
 
-      {/* <div className="h-[60px]" />
+      <div className="h-[80px]" />
 
-      <div id="Menu" className="w-full flex items-center justify-center text-center flex-col">
-        <div className="text-h3 sm:text-h2 w-full">
-          Our Menu
-        </div>
-        <div className="text-normal mt-[12px] max-w-[900px] mx-auto" style={{ color: 'var(--tt-color-text-gray)' }}>
-          From crispy classics to refreshing drinks and sweet treats, here’s everything we’re serving.
-        </div>
-      </div>
-
-      <div className="h-[40px]" />
-
-      {/* Products Grid */}
-      {/* <div className="w-full">
-        <div
-          className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 justify-items-center"
-          ref={gridRef}
-        >
-            {products.map((item) => (
-              <ProductCard
-                key={item.id}
-                product={item}
-                measureHeights={measureHeights}
-              />
-            ))}
-        </div>
-      </div> */}
+      <MenuSection />
 
       <div className="h-[80px]" />
 
