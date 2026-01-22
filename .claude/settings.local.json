@@ -2,7 +2,9 @@
   "permissions": {
     "allow": [
       "WebFetch(domain:www.figma.com)",
-      "mcp__figma-remote-mcp__get_design_context"
+      "mcp__figma-remote-mcp__get_design_context",
+      "Bash(npm run lint)",
+      "Bash(npx tsc:*)"
     ]
   }
 }
