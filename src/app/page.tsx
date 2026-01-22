@@ -3,7 +3,6 @@
 import React from "react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
-import MediaPreloader from "@/components/MediaPreloader";
 import Hero from "@/../public/Images/hero.png";
 import ThemeButton from "@/components/ThemeBtn";
 import InstagramComponent from "@/components/InstagramComponent";
@@ -13,12 +12,10 @@ import LocationComponent from "@/components/OurLocation";
 import Featuring from "@/components/featuring";
 
 const Home = React.memo(function Home() {
-  const [heroLoaded, setHeroLoaded] = React.useState(false);
-
   React.useEffect(() => {
     // Simple analytics: log page load
     if (typeof window !== 'undefined') {
-      (window as any).__pageLoaded = true;
+      (window as unknown as Window & { __pageLoaded?: boolean }).__pageLoaded = true;
       // You could send analytics here
     }
   }, []);

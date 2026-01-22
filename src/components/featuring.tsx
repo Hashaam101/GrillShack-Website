@@ -1,6 +1,6 @@
 "use client";
 
-import React, { ReactNode, useRef } from 'react';
+import React, { ReactNode } from 'react';
 import Image from 'next/image';
 import MediaPreloader from './MediaPreloader';
 import FeaturingStarIcon from './FeaturingStarIcon';
@@ -171,17 +171,5 @@ function Featuring() {
     </div>
   );
 }
-
-export default Featuring;
-
-
-
-    </div>
-
-  )
-
-}
-
-
 
 export default Featuring;

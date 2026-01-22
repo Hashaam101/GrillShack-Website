@@ -119,8 +119,8 @@ const Footer = ({ scrollToSection }: { scrollToSection?: (sectionId: string) => 
                                     <button onClick={() => scrollToSection && scrollToSection('Featuring')} className="hover:text-primary transition-colors cursor-pointer">
                                         <span className="hover:underline">Featuring</span>
                                     </button>
-                                    <button onClick={() => scrollToSection && scrollToSection("FAQ's")} className="hover:text-primary transition-colors cursor-pointer">
-                                        <span className="hover:underline">FAQ's</span>
+                                    <button onClick={() => scrollToSection && scrollToSection("FAQ&apos;s")} className="hover:text-primary transition-colors cursor-pointer">
+                                        <span className="hover:underline">FAQ&apos;s</span>
                                     </button>
                                     <button onClick={() => scrollToSection && scrollToSection('Location')} className="hover:text-primary transition-colors cursor-pointer">
                                         <span className="hover:underline">Location</span>

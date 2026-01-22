@@ -182,8 +182,8 @@ const ReviewPopup: React.FC<ReviewPopupProps> = ({ onClose, onSubmit }) => {
           <div className="flex flex-col items-center justify-center min-h-[200px]">
             {rating && rating < 4 ? (
               <>
-                <div className="text-lg font-bold mb-2 text-center text-gray-900">We're sorry for your experience.</div>
-                <div className="text-gray-800 text-center mb-4">Thank you for your feedback. We'll use it to improve our service.</div>
+                <div className="text-lg font-bold mb-2 text-center text-gray-900">We&apos;re sorry for your experience.</div>
+                <div className="text-gray-800 text-center mb-4">Thank you for your feedback. We&apos;ll use it to improve our service.</div>
               </>
             ) : (
               <>
@@ -218,7 +218,7 @@ const ReviewPopup: React.FC<ReviewPopupProps> = ({ onClose, onSubmit }) => {
           </>
         ) : (
           <>
-            <div className="text-lg font-bold mb-4 text-center text-gray-900">We'd love your feedback</div>
+            <div className="text-lg font-bold mb-4 text-center text-gray-900">We&apos;d love your feedback</div>
             <textarea
               className="w-full border border-gray-300 rounded p-2 mb-1 text-gray-900 placeholder-gray-400"
               rows={3}

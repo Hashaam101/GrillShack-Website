@@ -5,7 +5,6 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import MediaPreloader from "@/components/MediaPreloader";
 import HeroImg from "@/../public/Images/hero.webp";
-import Image from "next/image";
 
 const MenuPage = React.memo(function MenuPage() {
   const [heroLoaded, setHeroLoaded] = React.useState(false);
