@@ -7,7 +7,7 @@
     "build": "next build",
     "postbuild": "node ./scripts/fix-out.js",
     "start": "next start",
-    "lint": "next lint",
+    "lint": "eslint .",
     "export": "npm run build",
     "fix-out": "node ./scripts/fix-out.js",
     "serve-out": "npx serve out"
