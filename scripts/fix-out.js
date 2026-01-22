@@ -1,4 +1,5 @@
 #!/usr/bin/env node
+/* eslint-disable @typescript-eslint/no-require-imports */
 // Post-export fixer: convert internal absolute URLs ("/_next/...", "/Images/...", "/menu")
 // to relative URLs so the static site works when uploaded into a subfolder.
 // Usage: node scripts/fix-out.js [outDir]
