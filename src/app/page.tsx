@@ -40,14 +40,20 @@ const Home = React.memo(function Home() {
       <div className="sm:h-[20px]" />
 
   {/* hero img section */}
-  <div id="Home" className="h-[650px] sm:h-[500px] w-full relative overflow-visible flex flex-row items-center">
-        {/* Hero background image */}
+  <div id="Home" className="h-[500px] sm:h-[500px] w-full relative flex flex-row items-center">
+        {/* Hero background image - Mobile */}
+        <img
+          src="/Images/featuring/Section1.png"
+          alt="Home Page Image Mobile"
+          className="absolute inset-0 w-full h-full object-cover -z-10 sm:hidden rounded-[24px]"
+        />
+        {/* Hero background image - Desktop */}
         <img
           src={typeof Hero === "string" ? Hero : (Hero.src ?? "")}
           alt="Home Page Image"
-          className="absolute pt-4 mr-[-10px] right-0 h-[125%] -z-10"
+          className="hidden sm:block absolute pt-4 mr-[-10px] right-0 h-[125%] -z-10"
         />
-        <div className="pl-[60px] pb-8 flex flex-col items-start justify-center gap-2.5 relative z-10">
+        <div className="text-left pl-2 sm:pl-[60px] pb-8 flex flex-col items-start justify-center gap-2.5 relative z-10">
           <div className="text-normal1 sm:text-normal2 sm:font-bold border-l-3 border-primary-dark pl-[20px]">
             Serving the Best Fried Chicken in Waikiki
           </div>

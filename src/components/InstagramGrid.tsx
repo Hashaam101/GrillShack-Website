@@ -127,7 +127,7 @@ const InstagramGrid: React.FC<InstagramGridProps> = ({ posts }) => {
 						return (
 							<motion.div
 								key={post.id}
-								className="relative rounded-lg shadow-lg cursor-pointer bg-white"
+								className="relative rounded-lg shadow-lg cursor-pointer bg-black/70"
 								onMouseEnter={() => setHoveredId(post.id)}
 								onMouseLeave={() => setHoveredId(null)}
 								animate={{
@@ -143,7 +143,6 @@ const InstagramGrid: React.FC<InstagramGridProps> = ({ posts }) => {
 									flexShrink: 0,
 								}}
 							>
-								<div className="absolute top-0 right-0 w-full h-full bg-primary blur-xl opacity-5 hover:opacity-100 -z-20" />
 								{/* Image Container */}
 								<motion.div
 									className="relative h-full overflow-hidden rounded-lg"
@@ -179,13 +178,10 @@ const InstagramGrid: React.FC<InstagramGridProps> = ({ posts }) => {
 
 								{/* Content Container */}
 								<motion.div
-									className="absolute bottom-0 left-0 right-0 px-4 text-white z-30 w-full rounded-lg"
+									className={`absolute bottom-0 left-0 right-0 px-4 text-white z-30 w-full rounded-lg bg-black/70 ${isHovered ? 'pt-3' : ''}`}
 									animate={{
 										opacity: shouldCompress ? 0 : 1,
-										color: isHovered ? "#fff" : "#000",
-										// backgroundColor: !isHovered
-										// 	? "#ffffff"
-										// 	: "transparent",
+										// Removed color animation: color: isHovered ? "#fff" : "#000",
 									}}
 									transition={{ duration: 0.2 }}
 								>
@@ -231,7 +227,7 @@ const InstagramGrid: React.FC<InstagramGridProps> = ({ posts }) => {
 													height: 0,
 												}}
 												animate={{
-													opacity: 1,
+													opacity: 0.8,
 													height: "auto",
 												}}
 												exit={{ opacity: 0, height: 0 }}

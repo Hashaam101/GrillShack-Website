@@ -38,7 +38,7 @@ const FAQ: React.FC<FAQSectionProps> = ({
               className="w-full py-4 flex justify-between items-center text-left"
               onClick={() => toggleQuestion(index)}
             >
-              <span className="text-normal2 sm:text-h5 font-medium">{item.question}</span>
+              <span className="text-normal4 sm:text-normal2 font-medium">{item.question}</span>
               <svg
                 className={`w-5 h-5 transition-transform ${openIndex === index ? 'transform rotate-180' : ''}`}
                 fill="none"

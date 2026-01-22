@@ -61,26 +61,23 @@ const MenuProductCard: React.FC<MenuProductCardProps> = ({ product }) => {
                 S ${product.price.toFixed(2)}
               </p>
             )}
-            {product.priceM && (
-              <>
-                <div className="relative shrink-0 size-[4px]">
-                  <div className="absolute inset-0 bg-white/25 rounded-full"></div>
-                </div>
-                <p className="font-[var(--default-font-family)] leading-[normal] not-italic relative text-[14px] text-[color:var(--color-primary-dark)]">
-                  M ${product.priceM.toFixed(2)}
-                </p>
-              </>
+            {product.price && product.prices && (
+              <div className="relative shrink-0 size-[4px]">
+                <div className="absolute inset-0 bg-white/25 rounded-full"></div>
+              </div>
             )}
-            {product.priceL && (
-              <>
-                <div className="relative shrink-0 size-[4px]">
-                  <div className="absolute inset-0 bg-white/25 rounded-full"></div>
-                </div>
+            {product.prices && product.prices.map((price, index) => (
+              <React.Fragment key={index}>
+                {index > 0 && (
+                  <div className="relative shrink-0 size-[4px]">
+                    <div className="absolute inset-0 bg-white/25 rounded-full"></div>
+                  </div>
+                )}
                 <p className="font-[var(--default-font-family)] leading-[normal] not-italic relative text-[14px] text-[color:var(--color-primary-dark)]">
-                  L ${product.priceL.toFixed(2)}
+                  {price.tag1} ${price.tag2.toFixed(2)}
                 </p>
-              </>
-            )}
+              </React.Fragment>
+            ))}
           </div>
           <div className="flex items-center relative shrink-0 w-full">
             <p className="flex-[1_0_0] font-[var(--default-font-family)] leading-[normal] min-h-px min-w-px not-italic text-[14px] text-[color:var(--tt-color-text-gray)]/80 whitespace-pre-wrap tracking-[0.02em]">
