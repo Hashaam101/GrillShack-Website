@@ -27,7 +27,7 @@ const FAQ: React.FC<FAQSectionProps> = ({
     <div className="w-full px-[20px] md:px-[70px] py-0 ">
   <h2 className="text-h2 mb-[32px] sm:text-left text-center">
     <span className="sm:hidden">FAQs</span>
-    <span className="hidden sm:inline">Frequently Asked Questions</span>
+    <span className="hidden sm:inline">{title}</span>
   </h2>
       
       <div className="space-y-[10px]">

@@ -233,7 +233,7 @@ function Featuring() {
             <br /><br />
             Grill Shack takes its name from the once ubiquitous bicycle pedicabs found in Southeast Asia, and you can see one on our patio.
             <br /><br />
-            Visit us and experience our passion for Southeast Asian cuisine: we know you'll love it!
+            Visit us and experience our passion for Southeast Asian cuisine: we know you&apos;ll love it!
           </>
         }
         reverse={false}

@@ -19,7 +19,6 @@ interface InstagramGridProps {
 
 const InstagramCarousel: React.FC<InstagramGridProps> = ({ posts }) => {
 	const [slideHeight, setSlideHeight] = useState<number>(340);
-	const [currentSlide, setCurrentSlide] = useState(0);
 	const sliderRef = useRef<Slider>(null);
 	const containerRef = useRef<HTMLDivElement>(null);
 	const autoScrollRef = useRef<NodeJS.Timeout | null>(null);
@@ -86,7 +85,6 @@ const InstagramCarousel: React.FC<InstagramGridProps> = ({ posts }) => {
 		slidesToShow: 4,
 		slidesToScroll: 1,
 		arrows: true,
-		beforeChange: (_: number, next: number) => setCurrentSlide(next),
 		responsive: [
 			{
 				breakpoint: 1440,

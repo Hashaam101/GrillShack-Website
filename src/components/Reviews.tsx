@@ -1,4 +1,3 @@
-import Image from 'next/image';
 import ReviewCard from './ReviewCard';
 // For BG Pattern
 // import pattern from "@/../public/Svgs/BG Pattern.svg";
@@ -13,7 +12,7 @@ const Reviews = () => {
     const [showPopup, setShowPopup] = useState(false);
 
     // Handles rating and feedback logic
-    const handleReviewSubmit = (rating: number, feedback?: string) => {
+    const handleReviewSubmit = (rating: number) => {
         // Do not close the popup here; let ReviewPopup handle it after showing confirmation
         if (rating >= 4) {
             // Redirect to Google review page (cannot pre-select stars due to Google limitations)

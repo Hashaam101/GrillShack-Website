@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState } from 'react';
+import React from 'react';
 import { AnimatedCTAButton } from './CTA_header_btn';
 import logo from "@/assets/Images/Logo.png";
 import Image from 'next/image';
@@ -31,7 +31,6 @@ function Header( {onClick} : {onClick: () => void}) {
         router.push('/');
       } catch (e) {
         // push may throw in some environments; log and continue
-        // eslint-disable-next-line no-console
         console.warn('router.push failed:', e);
       }
       setTimeout(attemptScroll, 100);

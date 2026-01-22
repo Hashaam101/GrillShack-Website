@@ -101,15 +101,14 @@ const ReviewPopup: React.FC<ReviewPopupProps> = ({ onClose, onSubmit }) => {
         phoneToSend = "'" + phoneToSend;
       }
       formData.append('phone', phoneToSend);
-  fetch(GOOGLE_SHEETS_WEBAPP_URL, {
-        method: 'POST',
-        body: formData
-      });
-    } catch (e) {
-      // Optionally handle error
-    }
-  };
-
+        fetch(GOOGLE_SHEETS_WEBAPP_URL, {
+          method: 'POST',
+          body: formData
+        });
+      } catch {
+        // Optionally handle error
+      }
+    };
   return (
     <div className="fixed inset-0 bg-black/40 flex items-center justify-center z-50">
       <style>{`
