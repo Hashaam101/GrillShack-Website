@@ -3,10 +3,8 @@
 import React from "react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
-import MenuSection from "@/components/MenuSection";
 import MediaPreloader from "@/components/MediaPreloader";
 import HeroImg from "@/../public/Images/hero.webp";
-import { products } from "@/data/products";
 import Image from "next/image";
 
 const MenuPage = React.memo(function MenuPage() {
@@ -57,10 +55,6 @@ const MenuPage = React.memo(function MenuPage() {
           )}
         </div>
       </div>
-
-      <div className="h-[80px]" />
-
-      <MenuSection />
 
       <div className="h-[80px]" />
 

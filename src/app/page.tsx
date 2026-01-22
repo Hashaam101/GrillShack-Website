@@ -6,7 +6,6 @@ import Footer from "@/components/Footer";
 import MediaPreloader from "@/components/MediaPreloader";
 import Hero from "@/../public/Images/hero.png";
 import ThemeButton from "@/components/ThemeBtn";
-import MenuSection from "@/components/MenuSection";
 import InstagramComponent from "@/components/InstagramComponent";
 import Reviews from "@/components/Reviews";
 import FAQSection from "@/components/FAQ_section";
@@ -103,15 +102,6 @@ const Home = React.memo(function Home() {
 
         </div>
       </div>
-
-      <div className="h-[100px]" />
-
-      {/* Menu Section */}
-
-      <div>
-        <MenuSection/>
-      </div>
-
 
       <div className="h-[100px]" />
 
