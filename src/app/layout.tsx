@@ -3,6 +3,7 @@ import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import TabTitleHandler from "@/components/TabTitleHandler";
 import Script from 'next/script';
+import Logo from "@/assets/Images/Logo.png";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -16,38 +17,38 @@ const geistMono = Geist_Mono({
 
 // --- METADATA STAYS HERE ---
 export const metadata: Metadata = {
-  metadataBase: new URL("https://waikikichickeninparadise.com"),
-  title: "Grill Shack | Best Fried Chicken Waikiki Beach",
-  description: "Serving the Best Fried Chicken in Waikiki. Fresh, juicy chicken and island flavors just steps from Waikiki Beach! Try our most popular items and see why everyone in Honolulu is talking about us.",
+  metadataBase: new URL("https://grillshack.co.uk"),
+  title: "Grill Shack West Drayton | Smash Burgers, Donner & Grill",
+  description: "Smash Burgers, Donner Meat & Grill Platters - Freshly Prepared Whilst You Wait. Run by two local brothers bringing bold flavors to West Drayton.",
   keywords: [
-    "fried chicken", "waikiki chicken", "fish and chips", "food truck waikiki", "Restaurant" , "fast food waikiki", "best fried chicken honolulu", "crispy chicken sandwich", "loaded fries", "hawaiian flavors", "dine-in", "take away", "reservations", "waikiki beach", "honolulu food truck"
+    "Grill Shack", "West Drayton", "Smash Burgers", "Donner Meat", "Grill Platters", "Halal", "Wings", "Milkshakes", "Burgers", "Fresh Food", "Takeaway", "Delivery"
   ],
   robots: {
     index: true,
     follow: true,
   },
   openGraph: {
-    title: "Grill Shack | Best Fried Chicken Waikiki Beach",
-    description: "Serving the Best Fried Chicken in Waikiki. Fresh, juicy chicken and island flavors just steps from Waikiki Beach! Try our most popular items and see why everyone in Honolulu is talking about us.",
-    url: "https://waikikichickeninparadise.com/",
-    siteName: "Grill Shack",
+    title: "Grill Shack West Drayton | Smash Burgers, Donner & Grill",
+    description: "Smash Burgers, Donner Meat & Grill Platters - Freshly Prepared Whilst You Wait. Run by two local brothers bringing bold flavors to West Drayton.",
+    url: "https://grillshack.co.uk/",
+    siteName: "Grill Shack West Drayton",
     images: [
       {
-        url: "/Images/Logo.png",
+        url: Logo.src,
         width: 400,
         height: 400,
         alt: "Grill Shack Logo"
       }
     ],
-    locale: "en_US",
+    locale: "en_GB",
     type: "website"
   },
   twitter: {
     card: "summary_large_image",
-    site: "https://waikikichickeninparadise.com/",
-    title: "Grill Shack | Fried Chicken | Fish & Chips | Fast Food | Food Truck Waikiki",
-    description: "Serving the Best Fried Chicken in Waikiki. Fresh, juicy chicken and island flavors just steps from Waikiki Beach! Try our most popular items and see why everyone in Honolulu is talking about us.",
-    images: ["/Images/Logo.png"]
+    site: "https://grillshack.co.uk/",
+    title: "Grill Shack West Drayton | Smash Burgers, Donner & Grill",
+    description: "Smash Burgers, Donner Meat & Grill Platters - Freshly Prepared Whilst You Wait. Run by two local brothers bringing bold flavors to West Drayton.",
+    images: [Logo.src]
   }
 };
 // --- END METADATA ---
@@ -62,7 +63,7 @@ export default function RootLayout({
 
 
   return (
-  <html lang="en" className="dark">
+    <html lang="en" className="dark">
       <head>
 
       </head>
