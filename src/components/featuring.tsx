@@ -3,7 +3,7 @@
 import React, { ReactNode, useState, useEffect, useCallback } from 'react';
 import Image from 'next/image';
 import MediaPreloader from './MediaPreloader';
-import FeaturingStarIcon from './FeaturingStarIcon';
+
 
 type FeaturedDishSectionProps = {
   imageSrc: string | string[];
@@ -167,7 +167,7 @@ function Featuring() {
         title="The Shack Box"
         description={
           <>
-            Fresh lamb doner prepared shack-style with our signature garlic and chilli sauce. The Smash Doner Box combines burger, doner, wings, sides, and drink—perfect when you can't choose just one.
+            Fresh lamb doner prepared shack-style with our signature garlic and chilli sauce. The Smash Doner Box combines burger, doner, wings, sides, and drink—perfect when you can&apos;t choose just one.
             <br />
             <br />
             <span className="font-bold">Mixed Shack-Style Meat - £11.99</span>
@@ -227,7 +227,7 @@ function Featuring() {
         title="Desserts & Drinks"
         description={
           <>
-            Decadent milk cakes, classic chocolate and carrot cakes, traditional Kulfi, and Ben & Jerry's tubs. Sweet endings that match our quality standards.
+            Decadent milk cakes, classic chocolate and carrot cakes, traditional Kulfi, and Ben & Jerry&apos;s tubs. Sweet endings that match our quality standards.
             <br />
             <br />
             <a className="font-bold cursor-pointer" href="/menu">View our full menu to see more details</a>

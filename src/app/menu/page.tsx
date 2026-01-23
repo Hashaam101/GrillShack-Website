@@ -63,7 +63,7 @@ const MenuPage = React.memo(function MenuPage() {
           Order Now
         </div>
         <div className="text-normal mt-[12px] max-w-[900px] mx-auto" style={{ color: 'var(--tt-color-text-gray)' }}>
-          Can't decide where to start? Our Classic Cheeseburger with its double beef patties and crispy edges has earned its legendary status, while our Wing Wing Box delivers perfectly grilled wings that'll have you licking your fingers. From our flame-grilled chicken to loaded fries piled high with toppings, these bestsellers showcase exactly what Grill Shack is all about.
+          Can&apos;t decide where to start? Our Classic Cheeseburger with its double beef patties and crispy edges has earned its legendary status, while our Wing Wing Box delivers perfectly grilled wings that&apos;ll have you licking your fingers. From our flame-grilled chicken to loaded fries piled high with toppings, these bestsellers showcase exactly what Grill Shack is all about.
 
         </div>
       </div>

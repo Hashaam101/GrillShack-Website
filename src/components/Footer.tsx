@@ -8,7 +8,7 @@ const Footer = ({ scrollToSection }: { scrollToSection?: (sectionId: string) => 
             Grill Shack
         </div>
         <div className="mb-[32px] mx-2 text-normal2" style={{ color: 'var(--tt-color-text-gray)' }}>
-            You chill, we grill. That's the promise at Grill Shack—sit back, relax, and let us handle the cooking. Run by two local brothers who live for bold flavors and honest food, we've built a menu that covers every craving from signature smash burgers to flame-grilled platters, veggie options to indulgent desserts. Everything's made fresh whilst you wait, using quality ingredients and proper technique. No shortcuts, no compromises—just food that tastes as good as it should. Whether you're grabbing lunch, feeding the family, or satisfying late-night cravings, Grill Shack has you covered. Come hungry, leave happy. We'll see you at the Shack!
+            You chill, we grill. That&apos;s the promise at Grill Shack—sit back, relax, and let us handle the cooking. Run by two local brothers who live for bold flavors and honest food, we&apos;ve built a menu that covers every craving from signature smash burgers to flame-grilled platters, veggie options to indulgent desserts. Everything&apos;s made fresh whilst you wait, using quality ingredients and proper technique. No shortcuts, no compromises—just food that tastes as good as it should. Whether you&apos;re grabbing lunch, feeding the family, or satisfying late-night cravings, Grill Shack has you covered. Come hungry, leave happy. We&apos;ll see you at the Shack!
         </div>
         <div className="container mx-auto">
             <div className="grid grid-cols-1 sm:grid-cols-2 min-h-[100px] lg:grid-cols-3 gap-[10px] lg:gap-8">
