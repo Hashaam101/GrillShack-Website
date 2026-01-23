@@ -19,7 +19,7 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   metadataBase: new URL("https://grillshack.co.uk"),
   title: "Grill Shack West Drayton | Smash Burgers, Donner & Grill",
-  description: "Smash Burgers, Donner Meat & Grill Platters - Freshly Prepared Whilst You Wait. Run by two local brothers bringing bold flavors to West Drayton.",
+  description: "Smash Burgers, Donner Meat & Grill Platters - Freshly Prepared Whilst You Wait. Bringing bold flavors to West Drayton.",
   keywords: [
     "Grill Shack", "West Drayton", "Smash Burgers", "Donner Meat", "Grill Platters", "Halal", "Wings", "Milkshakes", "Burgers", "Fresh Food", "Takeaway", "Delivery"
   ],
@@ -29,7 +29,7 @@ export const metadata: Metadata = {
   },
   openGraph: {
     title: "Grill Shack West Drayton | Smash Burgers, Donner & Grill",
-    description: "Smash Burgers, Donner Meat & Grill Platters - Freshly Prepared Whilst You Wait. Run by two local brothers bringing bold flavors to West Drayton.",
+    description: "Smash Burgers, Donner Meat & Grill Platters - Freshly Prepared Whilst You Wait. Bringing bold flavors to West Drayton.",
     url: "https://grillshack.co.uk/",
     siteName: "Grill Shack West Drayton",
     images: [
@@ -47,7 +47,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     site: "https://grillshack.co.uk/",
     title: "Grill Shack West Drayton | Smash Burgers, Donner & Grill",
-    description: "Smash Burgers, Donner Meat & Grill Platters - Freshly Prepared Whilst You Wait. Run by two local brothers bringing bold flavors to West Drayton.",
+    description: "Smash Burgers, Donner Meat & Grill Platters - Freshly Prepared Whilst You Wait. Bringing bold flavors to West Drayton.",
     images: [Logo.src]
   }
 };
