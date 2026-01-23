@@ -3,12 +3,12 @@ import Image from "next/image";
 import Logo from "@/assets/Images/Logo.png";
 
 const Footer = ({ scrollToSection }: { scrollToSection?: (sectionId: string) => void }) => (
-    <footer className="w-full px-[10px] md:px-[50px] lg:px-[70px] pb-[20px] sm:pb-[10px]" style={{ background: 'var(--tt-bg-color)'}}>
+    <footer className="w-full px-[10px] md:px-[50px] lg:px-[70px] pb-[20px] sm:pb-[10px]" style={{ background: 'var(--tt-bg-color)' }}>
         <div className="text-h3 sm:text-h2 w-full">
             Grill Shack
         </div>
         <div className="mb-[32px] mx-2 text-normal2" style={{ color: 'var(--tt-color-text-gray)' }}>
-            Enjoy crispy, island-style fried chicken made fresh daily in the heart of Waikiki. From quick bites to catering, Grill Shack brings flavor and aloha to every meal.
+            You chill, we grill. That's the promise at Grill Shack—sit back, relax, and let us handle the cooking. Run by two local brothers who live for bold flavors and honest food, we've built a menu that covers every craving from signature smash burgers to flame-grilled platters, veggie options to indulgent desserts. Everything's made fresh whilst you wait, using quality ingredients and proper technique. No shortcuts, no compromises—just food that tastes as good as it should. Whether you're grabbing lunch, feeding the family, or satisfying late-night cravings, Grill Shack has you covered. Come hungry, leave happy. We'll see you at the Shack!
         </div>
         <div className="container mx-auto">
             <div className="grid grid-cols-1 sm:grid-cols-2 min-h-[100px] lg:grid-cols-3 gap-[10px] lg:gap-8">
@@ -71,7 +71,7 @@ const Footer = ({ scrollToSection }: { scrollToSection?: (sectionId: string) => 
                             onMouseLeave={e => e.currentTarget.style.background = 'color-mix(in oklab, var(--color-white) 5%, transparent)'}
                         >
                             <svg height="22" width="22" viewBox="0 0 27 28" xmlns="http://www.w3.org/2000/svg" style={{ color: 'var(--tt-color-text-gray)' }}>
-                                <path fill="currentColor" className="fill-opacity-60 group-hover:fill-[#C1272D] group-hover:fill-opacity-100 transition-all" d="M16.656 1.029c1.637-0.025 3.262-0.012 4.886-0.025 0.054 2.031 0.878 3.859 2.189 5.213l-0.002-0.002c1.411 1.271 3.247 2.095 5.271 2.235l0.028 0.002v5.036c-1.912-0.048-3.71-0.489-5.331-1.247l0.082 0.034c-0.784-0.377-1.447-0.764-2.077-1.196l0.052 0.034c-0.012 3.649 0.012 7.298-0.025 10.934-0.103 1.853-0.719 3.543-1.707 4.954l0.020-0.031c-1.652 2.366-4.328 3.919-7.371 4.011l-0.014 0c-0.123 0.006-0.268 0.009-0.414 0.009-1.73 0-3.347-0.482-4.725-1.319l0.040 0.023c-2.508-1.509-4.238-4.091-4.558-7.094l-0.004-0.041c-0.025-0.625-0.037-1.25-0.012-1.862 0.49-4.779 4.494-8.476 9.361-8.476 0.547 0 1.083 0.047 1.604 0.136l-0.056-0.008c0.025 1.849-0.050 3.699-0.050 5.548-0.423-0.153-0.911-0.242-1.42-0.242-1.868 0-3.457 1.194-4.045 2.861l-0.009 0.030c-0.133 0.427-0.21 0.918-0.21 1.426 0 0.206 0.013 0.41 0.037 0.61l-0.002-0.024c0.332 2.046 2.086 3.59 4.201 3.59 0.061 0 0.121-0.001 0.181-0.004l-0.009 0c1.463-0.044 2.733-0.831 3.451-1.994l0.010-0.018c0.267-0.372 0.45-0.822 0.511-1.311l0.001-0.014c0.125-2.237 0.075-4.461 0.087-6.698 0.012-5.036-0.012-10.060 0.025-15.083z"/>
+                                <path fill="currentColor" className="fill-opacity-60 group-hover:fill-[#C1272D] group-hover:fill-opacity-100 transition-all" d="M16.656 1.029c1.637-0.025 3.262-0.012 4.886-0.025 0.054 2.031 0.878 3.859 2.189 5.213l-0.002-0.002c1.411 1.271 3.247 2.095 5.271 2.235l0.028 0.002v5.036c-1.912-0.048-3.71-0.489-5.331-1.247l0.082 0.034c-0.784-0.377-1.447-0.764-2.077-1.196l0.052 0.034c-0.012 3.649 0.012 7.298-0.025 10.934-0.103 1.853-0.719 3.543-1.707 4.954l0.020-0.031c-1.652 2.366-4.328 3.919-7.371 4.011l-0.014 0c-0.123 0.006-0.268 0.009-0.414 0.009-1.73 0-3.347-0.482-4.725-1.319l0.040 0.023c-2.508-1.509-4.238-4.091-4.558-7.094l-0.004-0.041c-0.025-0.625-0.037-1.25-0.012-1.862 0.49-4.779 4.494-8.476 9.361-8.476 0.547 0 1.083 0.047 1.604 0.136l-0.056-0.008c0.025 1.849-0.050 3.699-0.050 5.548-0.423-0.153-0.911-0.242-1.42-0.242-1.868 0-3.457 1.194-4.045 2.861l-0.009 0.030c-0.133 0.427-0.21 0.918-0.21 1.426 0 0.206 0.013 0.41 0.037 0.61l-0.002-0.024c0.332 2.046 2.086 3.59 4.201 3.59 0.061 0 0.121-0.001 0.181-0.004l-0.009 0c1.463-0.044 2.733-0.831 3.451-1.994l0.010-0.018c0.267-0.372 0.45-0.822 0.511-1.311l0.001-0.014c0.125-2.237 0.075-4.461 0.087-6.698 0.012-5.036-0.012-10.060 0.025-15.083z" />
                             </svg>
                         </a>
                     </div>

@@ -26,16 +26,16 @@ const LocationComponent = () => {
       url: "https://maps.google.com/?q=Grill Shack, 119 Falling Ln, West Drayton UB7 8AG, United Kingdom"
     },
     openingHours: [
-      { day: "Daily   -----------", hours: "11:30AM – 12AM" }
+      { day: "Daily   -----------", hours: "11:30AM – 1AM" }
     ]
   };
 
   // Create the Google Maps embed URL
   const mapUrl = `https://maps.google.com/maps?q=${encodeURIComponent(locationData.mapQuery)}&t=&z=15&ie=UTF8&iwloc=&output=embed`;
-  
+
   return (
-  <div className="sm:mx-[70px] mx-0">
-  <h2 className="text-h2 mb-[32px] sm:text-left text-center">Our Location</h2>
+    <div className="sm:mx-[70px] mx-0">
+      <h2 className="text-h2 mb-[32px] sm:text-left text-center">Our Location</h2>
       <div className="relative">
         {/* Map Container */}
         <div className="w-full h-[400px] rounded-[14px] overflow-hidden bg-white border border-gray-500 location-map-container">

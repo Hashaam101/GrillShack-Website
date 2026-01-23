@@ -36,8 +36,8 @@ const Home = React.memo(function Home() {
 
       <div className="sm:h-[20px]" />
 
-  {/* hero img section */}
-  <div id="Home" className="h-[500px] sm:h-[500px] w-full relative flex flex-row items-center">
+      {/* hero img section */}
+      <div id="Home" className="h-[500px] sm:h-[500px] w-full relative flex flex-row items-center">
         {/* Hero background image - Mobile */}
         <div className="absolute inset-0 w-full h-full -z-10 sm:hidden">
           <Image
@@ -58,20 +58,17 @@ const Home = React.memo(function Home() {
         </div>
         <div className="text-left pl-2 sm:pl-[60px] pb-8 flex flex-col items-start justify-center gap-2.5 relative z-10">
           <div className="text-normal1 sm:text-normal2 sm:font-bold border-l-3 border-primary-dark pl-[20px]">
-            Serving the Best Fried Chicken in Waikiki
+            Best Grilled Chicken in West Drayton -
           </div>
-          <div className="text-[32px] sm:text-h2 lg:text-h1 sm:font-medium leading-[1.2]" style={{fontFamily: 'var(--font-southern-barn)'}}>
-            Savor the Best
+          <div className="text-[32px] sm:text-h2 lg:text-h1 sm:font-medium leading-[1.2]" style={{ fontFamily: 'var(--font-southern-barn)' }}>
+            Smash Burgers, Donner Meat &
             <br />
-            Fast Food in
+            Grill Platters - Freshly Prepared
             <br />
-            West Drayton –
-            <br />
-            Authentic and Flavorful!
-            <br />
+            Whilst You Wait
           </div>
         </div>
-      </div>  
+      </div>
 
       <div className="h-[100px]" />
 
@@ -80,8 +77,16 @@ const Home = React.memo(function Home() {
         <div className="text-h3 sm:text-h2 w-full">
           Try our most popular items
         </div>
+
+        {/* Featuring and Story */}
+        <div id="Featuring">
+          <Featuring />
+        </div>
+        {/* Story section now included in Featuring */}
+
+        <div className="h-[80px]" />
         <div className="text-normal mt-[20px]" style={{ color: 'var(--tt-color-text-gray)' }}>
-          Treat yourself to our must-try dishes that everyone in Honolulu is talking about.
+          Treat yourself with our must-try dishes that everyone in Drayton is talking about.
         </div>
         <div className="mt-[20px] gap-[20px] flex flex-col sm:flex-row items-center justify-center">
           <ThemeButton
@@ -118,12 +123,6 @@ const Home = React.memo(function Home() {
         <Reviews />
       </div>
 
-      {/* Featuring and Story */}
-      <div className="h-[100px]" />
-      <div id="Featuring">
-        <Featuring />
-      </div>
-      {/* Story section now included in Featuring */}
 
       <div className="h-[100px]" />
       {/* FAQ */}

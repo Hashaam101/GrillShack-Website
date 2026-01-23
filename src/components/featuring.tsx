@@ -123,48 +123,6 @@ const FeaturedDishSection: React.FC<FeaturedDishSectionProps> = ({
 function Featuring() {
   return (
     <div className='w-full'>
-      <div className='w-full max-w-[1000px] mx-auto px-4 md:px-0'>
-        <div className='text-center text-h2 mb-12 md:mb-[80px]'>
-          <div className=''>Featuring</div>
-        </div>
-        <div className="grid grid-cols-2 gap-x-4 gap-y-8 md:flex md:justify-between md:items-center md:gap-0 self-stretch text-[var(--tt-color-text-gray)] group">
-          <div className='flex flex-col items-center gap-[10px] w-full group'>
-            <div className="h-[22px] w-[22px] aspect-square transition-colors duration-300 group-hover:text-[#FFD84D]">
-              <FeaturingStarIcon size={22} className='text-current' hoverRays />
-            </div>
-            <div className='text-normal3 text-center'>Groups & Catering</div>
-          </div>
-          <div className='h-[80px] w-[1px] hidden md:block transition-all duration-300 group-hover:rotate-8 group-hover:scale-y-110 group-hover:bg-[#FFD84D]/50' style={{ background: 'color-mix(in oklab, var(--color-white) 25%, transparent)' }}></div>
-          <div className='flex flex-col items-center gap-[10px] w-full group'>
-            <div className="h-[22px] w-[22px] aspect-square transition-colors duration-300 group-hover:text-[#FFD84D]">
-              <FeaturingStarIcon size={22} className='text-current' hoverRays />
-            </div>
-            <div className='text-normal3 text-center'>Crispiest Chicken</div>
-          </div>
-          <div className="col-span-2 md:hidden"></div>
-          <div className='h-[80px] w-[1px] hidden md:block transition-all duration-300 group-hover:rotate-8 group-hover:scale-y-110 group-hover:bg-[#FFD84D]/50' style={{ background: 'color-mix(in oklab, var(--color-white) 25%, transparent)' }}></div>
-          <div className='flex flex-col items-center gap-[10px] w-full group'>
-            <div className="h-[22px] w-[22px] aspect-square transition-colors duration-300 group-hover:text-[#FFD84D]">
-              <FeaturingStarIcon size={22} className='text-current' hoverRays />
-            </div>
-            <div className='text-normal3 text-center'>Family Friendly</div>
-          </div>
-          <div className='h-[80px] w-[1px] hidden md:block transition-all duration-300 group-hover:rotate-8 group-hover:scale-y-110 group-hover:bg-[#FFD84D]/50' style={{ background: 'color-mix(in oklab, var(--color-white) 25%, transparent)' }}></div>
-          <div className='flex flex-col items-center gap-[10px] w-full group'>
-            <div className="h-[22px] w-[22px] aspect-square transition-colors duration-300 group-hover:text-[#FFD84D]">
-              <FeaturingStarIcon size={22} className='text-current' hoverRays />
-            </div>
-            <div className='text-normal3 text-center'>Dine-in & Take Away</div>
-          </div>
-        </div>
-      </div>
-
-      <div className="h-[100px] mb-6 lg:mb-0" />
-      <div className='text-center mb-12 md:mb-[80px]'>
-        <div className='text-h2'>Best Fried Chicken Honolulu & Waikiki Beach</div>
-        <div className='text-normal mt-1 mx-2x'>Juicy fried chicken and fish & chips made fresh daily — a fast food favorite near you!</div>
-      </div>
-
       {/* Featured Dishes */}
       <FeaturedDishSection
         imageSrc={[
@@ -175,9 +133,26 @@ function Featuring() {
         ]}
         alt="Smashing burgers"
         title="Smashing burgers"
-        description="
-        Feature the single/main burgers here. Specifically the Beef Smash burgers.
-        "
+        description={
+          <>
+            Premium beef smashed onto a scorching hot grill, creating crispy crusts with juicy centers. Double patties as standard, topped with fresh ingredients and signature sauces. Customize with extra patties or premium toppings.
+            <br />
+            <br />
+            <span className="font-bold">Fully Loaded Smash - £9.99</span>
+            <br />
+            Double beef patty, cheese, lettuce, pickles, caramelized onions, turkey rashers, onion rings, finished with mayo & classic burger sauce.
+            <br />
+            <br />
+            <span className="font-bold">BBQ Feast Burger - £7.49</span>
+            <br />
+            Double beef patty, cheese, lettuce, caramelized onions, pickles, finished with mayo & BBQ sauce.
+            <br />
+            <br />
+            <span className="font-bold">Halloumi Fun - £7.49</span>
+            <br />
+            Double beef patty, cheese, lettuce, onions, halloumi slices, pickles, finished with mayo & classic burger sauce.
+          </>
+        }
         reverse={false}
       />
 
@@ -186,10 +161,33 @@ function Featuring() {
           "/Images/featuring/The Shack Box/The Shack Box - 0.png",
           "/Images/featuring/The Shack Box/The Shack Box - 1.png",
           "/Images/featuring/The Shack Box/The Shack Box - 2.png",
+          "/Images/featuring/The Shack Box/The Shack Box - 3.png",
         ]}
         alt="The Shack Box"
         title="The Shack Box"
-        description='Marketing Angle: Push this as "Great Value for Money". Specific Items to list: "Smash on a Box," "Mix Meat Box," "Hunger Buster Box," and "Wing Wing Box".'
+        description={
+          <>
+            Fresh lamb doner prepared shack-style with our signature garlic and chilli sauce. The Smash Doner Box combines burger, doner, wings, sides, and drink—perfect when you can't choose just one.
+            <br />
+            <br />
+            <span className="font-bold">Mixed Shack-Style Meat - £11.99</span>
+            <br />
+            Shack-style lamb doner & grilled chicken, or topped with mix salad, coleslaw and signature garlic and chilli sauce.
+            <br />
+            <br />
+            <span className="font-bold">Smash Donner Box - £14.99</span>
+            <br />
+            Served with signature burger, tender lamb doner, 3 grilled wings/3 Fried Tenders, a side, and a drink.
+            <br />
+            <br />
+            <span className="font-bold">Hunger Buster Box - £11.99</span>
+            <br />
+            Half Chicken
+            3 Grilled Wings
+            Pitta Bread Coleslaw and drink
+            <br />
+          </>
+        }
         imagePriority={true}
         reverse={true}
       />
@@ -201,7 +199,18 @@ function Featuring() {
         ]}
         alt="Grill Items"
         title="Grill Items"
-        description="Items: Chicken, Platters, Wings, Strips, Rice, and Loaded Fries."
+        description={
+          <>
+            Fire up your taste buds with our signature grilled selection! Every piece is cooked to perfection over an open flame, delivering bold, smoky flavors. From tender wings to juicy chicken and mouthwatering burgers, choose your heat level – Lemon to X-Hot – and experience chicken done right: charred, succulent, and packed with flavor.
+            <br />
+            <br />
+            <span className="font-bold">1/4 Piece Chicken - £4.50</span>
+            <br />
+            <span className="font-bold">1/2 Piece Chicken - £6.99</span>
+            <br />
+            <span className="font-bold">Whole Chicken - £11.99</span>
+          </>
+        }
         reverse={false}
       />
 
@@ -216,7 +225,14 @@ function Featuring() {
         ]}
         alt="Desserts & Drinks"
         title="Desserts & Drinks"
-        description='Milkshakes: Introduce the dessert range here. Upsell Feature: Explicitly mention the option to "Upgrade your drink to a shake" for 250 on regular/limited meals.'
+        description={
+          <>
+            Decadent milk cakes, classic chocolate and carrot cakes, traditional Kulfi, and Ben & Jerry's tubs. Sweet endings that match our quality standards.
+            <br />
+            <br />
+            <a className="font-bold cursor-pointer" href="/menu">View our full menu to see more details</a>
+          </>
+        }
         imagePriority={true}
         reverse={true}
       />
@@ -227,13 +243,10 @@ function Featuring() {
         title="Meal Options for everyone"
         description={
           <>
-            La Lune Restaurant for many years has been one of the most popular Cambodian restaurants in town. Building on the family tradition, brothers Michael, Sean and Tommy Saing launched Grill Shack.
-            <br /><br />
-            The brothers learned the restaurant business from their father, Sokchheng Saing, who owns La Lune, and have incorporated his valuable direction in the dishes at Grill Shack. The menu features popular Cambodian, Thai and Vietnamese Shack dishes along with refreshing beverages like Grill Iced Coffee, Thai Iced Tea and young fresh coconut.
-            <br /><br />
-            Grill Shack takes its name from the once ubiquitous bicycle pedicabs found in Southeast Asia, and you can see one on our patio.
-            <br /><br />
-            Visit us and experience our passion for Southeast Asian cuisine: we know you&apos;ll love it!
+            Quality steak burgers and cheeseburgers in smaller portions. Real food for real kids—no mystery meat.
+            <br />
+            <br />
+            <a className="font-bold cursor-pointer" href="/menu">View our full menu to see more details</a>
           </>
         }
         reverse={false}
@@ -243,8 +256,14 @@ function Featuring() {
         imageSrc="/Images/featuring/Sides & Add-ons/Sides & Add-ons - 0.png"
         alt="Sides & Add-ons"
         title="Sides & Add-ons"
-        description='Highlight the specific fry options: Loaded Chicken Fries, Cheesy Fries, and Peri Fries.'
-        imagePriority={true}
+        description={
+          <>
+            Fresh accompaniments from classic fries to crispy wedges, onion rings, mozzarella sticks, mac & cheese bites, and more. Perfect complements to any meal.
+            <br />
+            <br />
+            <a className="font-bold cursor-pointer" href="/menu">View our full menu to see more details</a>
+          </>
+        } imagePriority={true}
         reverse={true}
       />
     </div>
