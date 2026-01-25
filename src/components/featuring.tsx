@@ -138,6 +138,7 @@ function Featuring() {
             Premium beef smashed onto a scorching hot grill, creating crispy crusts with juicy centers. Double patties as standard, topped with fresh ingredients and signature sauces. Customize with extra patties or premium toppings.
             <br />
             <br />
+            <br />
             <span className="font-bold">Fully Loaded Smash - £9.99</span>
             <br />
             Double beef patty, cheese, lettuce, pickles, caramelized onions, turkey rashers, onion rings, finished with mayo & classic burger sauce.
@@ -151,6 +152,11 @@ function Featuring() {
             <span className="font-bold">Halloumi Fun - £7.49</span>
             <br />
             Double beef patty, cheese, lettuce, onions, halloumi slices, pickles, finished with mayo & classic burger sauce.
+            <br />
+            <br />
+            <span className="font-bold">Classic Cheese Burger - £7.49</span>
+            <br />
+            Double beef patty with cheese, lettuce, pickles, caramelized onions finished with mayo & classic burger sauce.
           </>
         }
         reverse={false}
@@ -158,16 +164,16 @@ function Featuring() {
 
       <FeaturedDishSection
         imageSrc={[
-          "/Images/featuring/The Shack Box/The Shack Box - 0.png",
-          "/Images/featuring/The Shack Box/The Shack Box - 1.png",
-          "/Images/featuring/The Shack Box/The Shack Box - 2.png",
-          "/Images/featuring/The Shack Box/The Shack Box - 3.png",
+          "/Images/featuring/Shack Style Boxes/Shack Style Boxes - 0.png",
+          "/Images/featuring/Shack Style Boxes/Shack Style Boxes - 1.png",
+          "/Images/featuring/Shack Style Boxes/Shack Style Boxes - 2.png",
+          "/Images/featuring/Shack Style Boxes/Shack Style Boxes - 3.png",
         ]}
-        alt="The Shack Box"
-        title="The Shack Box"
+        alt="Shack Style Boxes"
+        title="Shack Style Boxes"
         description={
           <>
-            Fresh lamb doner prepared shack-style with our signature garlic and chilli sauce. The Smash Doner Box combines burger, doner, wings, sides, and drink—perfect when you can&apos;t choose just one.
+            Freshly prepared Shack Style Boxes with unbeatable value to money, try anything from ranging from our Mixed Shack-Style Meat, Smash Donner Box, Hunger Buster Box, and Wing Wing Box. All of which come with a side and a drink.
             <br />
             <br />
             <span className="font-bold">Mixed Shack-Style Meat - £11.99</span>
@@ -182,9 +188,12 @@ function Featuring() {
             <br />
             <span className="font-bold">Hunger Buster Box - £11.99</span>
             <br />
-            Half Chicken
-            3 Grilled Wings
-            Pitta Bread Coleslaw and drink
+            Half Chicken, 3 Grilled Wings, Pitta Bread Coleslaw and drink
+            <br />
+            <br />
+            <span className="font-bold">Wing Wing Box - £11.99</span>
+            <br />
+            13 Grilled wings, Rice or chips, Salad Coleslaw and Drink
             <br />
           </>
         }
@@ -196,24 +205,98 @@ function Featuring() {
         imageSrc={[
           "/Images/featuring/Lets Get Grilling/Lets Get Grilling - 0.png",
           "/Images/featuring/Lets Get Grilling/Lets Get Grilling - 1.png",
+          "/Images/featuring/Lets Get Grilling/Lets Get Grilling - 2.png",
+          "/Images/featuring/Lets Get Grilling/Lets Get Grilling - 3.png",
+          "/Images/featuring/Lets Get Grilling/Lets Get Grilling - 4.png"
         ]}
-        alt="Grill Items"
-        title="Grill Items"
+        alt="Let's Get Grilling"
+        title="Let's Get Grilling"
         description={
           <>
             Fire up your taste buds with our signature grilled selection! Every piece is cooked to perfection over an open flame, delivering bold, smoky flavors. From tender wings to juicy chicken and mouthwatering burgers, choose your heat level – Lemon to X-Hot – and experience chicken done right: charred, succulent, and packed with flavor.
             <br />
             <br />
-            <span className="font-bold">1/4 Piece Chicken - £4.50</span>
+            <span className="font-bold">Shack Wrap - £4.99</span>
             <br />
-            <span className="font-bold">1/2 Piece Chicken - £6.99</span>
+            Grilled chicken strips with lettuce, mayo & sweet chili sauce.
             <br />
-            <span className="font-bold">Whole Chicken - £11.99</span>
+            <br />
+            <span className="font-bold">Shack Grilled Burger - £4.99</span>
+            <br />
+            Grilled fillet breast served with lettuce, mayo & hash brown.
+            <br />
+            <br />
+            <span className="font-bold">Chicken & Rice - £5.99</span>
+            <br />
+            Grilled chicken strips with Rice.
+            <br />
+            <br />
+            <span className="font-bold">Grilled Chicken</span>
+            <br />
+            1/4 Piece Chicken - £4.50<br /> 1/2 Piece Chicken - £6.99<br /> Whole Chicken - £11.99
+            <br />
+            <br />
+            <span className="italic"><span className="text-primary">*</span> Make it a meal for £2.50 only.</span>
           </>
         }
+        imagePriority={true}
         reverse={false}
       />
 
+      <FeaturedDishSection
+        imageSrc="/Images/featuring/Meal Options for everyone/Meal Options for everyone - 0.png"
+        alt="Meal Options for everyone"
+        title="Meal Options for everyone"
+        description={
+          <>
+            Quality steak burgers and cheeseburgers in smaller portions. Real food for real kids—no mystery meat.
+            <br />
+            <br />
+            <a className="font-bold cursor-pointer" href="/menu">View our full menu to see more details</a>
+          </>
+        }
+        imagePriority={true}
+        reverse={true}
+      />
+
+      <FeaturedDishSection
+        imageSrc={[
+          "/Images/featuring/Sides & Add-ons/Sides & Add-ons - 0.png",
+          "/Images/featuring/Sides & Add-ons/Sides & Add-ons - 1.png",
+          "/Images/featuring/Sides & Add-ons/Sides & Add-ons - 2.png",
+          "/Images/featuring/Sides & Add-ons/Sides & Add-ons - 3.png",
+        ]}
+        alt="Sides & Add-ons"
+        title="Sides & Add-ons"
+        description={
+          <>
+            Fresh accompaniments from classic fries to crispy wedges, onion rings, mozzarella sticks, mac & cheese bites, and more. Perfect complements to any meal.
+            <br />
+            <br />
+            <span className="font-bold">Chilli Cheese Bites (5pcs)</span>
+            <br />
+            <br />
+            <span className="font-bold">Mozzarella Sticks (4pcs)</span>
+            <br />
+            <br />
+            <span className="font-bold">Corn on the Cob</span>
+            <br />
+            <br />
+            <span className="font-bold">Chicken nuggets</span>
+            <br />
+            5 PCs - £2.49
+            <br />
+            10 PCs - £ 4.49
+            <br />
+            15 PCs - £ 6.99
+            <br />
+            <br />
+            <a className="font-bold cursor-pointer" href="/menu">View our full menu to see more details</a>
+          </>
+        }
+        imagePriority={true}
+        reverse={false}
+      />
       <FeaturedDishSection
         imageSrc={[
           "/Images/featuring/Desserts & Drinks/Desserts & Drinks - 0.png",
@@ -237,35 +320,6 @@ function Featuring() {
         reverse={true}
       />
 
-      <FeaturedDishSection
-        imageSrc="/Images/featuring/Meal Options for everyone/Meal Options for everyone - 0.png"
-        alt="Meal Options for everyone"
-        title="Meal Options for everyone"
-        description={
-          <>
-            Quality steak burgers and cheeseburgers in smaller portions. Real food for real kids—no mystery meat.
-            <br />
-            <br />
-            <a className="font-bold cursor-pointer" href="/menu">View our full menu to see more details</a>
-          </>
-        }
-        reverse={false}
-      />
-
-      <FeaturedDishSection
-        imageSrc="/Images/featuring/Sides & Add-ons/Sides & Add-ons - 0.png"
-        alt="Sides & Add-ons"
-        title="Sides & Add-ons"
-        description={
-          <>
-            Fresh accompaniments from classic fries to crispy wedges, onion rings, mozzarella sticks, mac & cheese bites, and more. Perfect complements to any meal.
-            <br />
-            <br />
-            <a className="font-bold cursor-pointer" href="/menu">View our full menu to see more details</a>
-          </>
-        } imagePriority={true}
-        reverse={true}
-      />
     </div>
   );
 }
