@@ -189,12 +189,12 @@ function Featuring() {
             <br />
             <span className="font-bold">Hunger Buster Box - £11.99</span>
             <br />
-            Half Chicken, 3 Grilled Wings, Pitta Bread Coleslaw and drink
+            Half Chicken, 3 Grilled Wings, Pitta Bread, Mix Salad, Coleslaw and Drink
             <br />
             <br />
             <span className="font-bold">Wing Wing Box - £11.99</span>
             <br />
-            13 Grilled wings, Rice or chips, Salad Coleslaw and Drink
+            15 Grilled wings, Rice or chips, Mix Salad, Coleslaw and Drink
             <br />
           </>
         }
@@ -224,7 +224,7 @@ function Featuring() {
             <br />
             <span className="font-bold">Shack Grilled Burger - £4.99</span>
             <br />
-            Grilled fillet breast served with lettuce, mayo & hash brown.
+            Grilled fillet breast served with lettuce, mayo, cheese & hash brown.
             <br />
             <br />
             <span className="font-bold">Chicken & Rice - £5.99</span>
@@ -274,24 +274,6 @@ function Featuring() {
             Fresh accompaniments from classic fries to crispy wedges, onion rings, mozzarella sticks, mac & cheese bites, and more. Perfect complements to any meal.
             <br />
             <br />
-            <span className="font-bold">Chilli Cheese Bites (5pcs)</span>
-            <br />
-            <br />
-            <span className="font-bold">Mozzarella Sticks (4pcs)</span>
-            <br />
-            <br />
-            <span className="font-bold">Corn on the Cob</span>
-            <br />
-            <br />
-            <span className="font-bold">Chicken nuggets</span>
-            <br />
-            5 PCs - £2.49
-            <br />
-            10 PCs - £ 4.49
-            <br />
-            15 PCs - £ 6.99
-            <br />
-            <br />
             <a className="font-bold cursor-pointer" href="/menu">View our full menu to see more details</a>
           </>
         }
@@ -305,6 +287,7 @@ function Featuring() {
           "/Images/featuring/Desserts & Drinks/Desserts & Drinks - 2.png",
           "/Images/featuring/Desserts & Drinks/Desserts & Drinks - 3.png",
           "/Images/featuring/Desserts & Drinks/Desserts & Drinks - 4.png",
+          "/Images/featuring/Desserts & Drinks/Desserts & Drinks - 5.png",
         ]}
         alt="Desserts & Drinks"
         title="Desserts & Drinks"

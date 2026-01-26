@@ -45,7 +45,7 @@ const FAQSection = () => {
     },
     {
       question: "Can I make any burger a meal?",
-      answer: "Absolutely! Add fries, coleslaw, onion rings, and a drink to any burger for just £2.50. You can also upgrade your drink to a milkshake for £2.50."
+      answer: "Absolutely! Add fries and a drink to any burger for just £2.50."
     },
     {
       question: "What's your food hygiene rating?",
