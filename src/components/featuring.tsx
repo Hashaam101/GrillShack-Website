@@ -179,12 +179,12 @@ function Featuring() {
             <br />
             <span className="font-bold">Mixed Shack-Style Meat - £11.99</span>
             <br />
-            Shack-style lamb doner & grilled chicken, or topped with mix salad, coleslaw and signature garlic and chilli sauce.
+            Shack-style lamb donner / grilled chicken, or mix topped with mix salad, coleslaw & finished with signature garlic and chilli sauce.
             <br />
             <br />
             <span className="font-bold">Smash Donner Box - £14.99</span>
             <br />
-            Served with signature burger, tender lamb doner, 3 grilled wings/3 Fried Tenders, a side, and a drink.
+            Served with signature burger, tender lamb donner, 3 grilled wings/3 Fried Tenders, a side, and a drink.
             <br />
             <br />
             <span className="font-bold">Hunger Buster Box - £11.99</span>
