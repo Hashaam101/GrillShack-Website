@@ -130,6 +130,7 @@ function Featuring() {
           "/Images/featuring/Smashing burgers/Smashing burgers - 1.png",
           "/Images/featuring/Smashing burgers/Smashing burgers - 2.png",
           "/Images/featuring/Smashing burgers/Smashing burgers - 3.png",
+          "/Images/featuring/Smashing burgers/Smashing burgers - 4.png",
         ]}
         alt="Smashing burgers"
         title="Smashing burgers"
@@ -304,7 +305,6 @@ function Featuring() {
           "/Images/featuring/Desserts & Drinks/Desserts & Drinks - 2.png",
           "/Images/featuring/Desserts & Drinks/Desserts & Drinks - 3.png",
           "/Images/featuring/Desserts & Drinks/Desserts & Drinks - 4.png",
-          "/Images/featuring/Desserts & Drinks/Desserts & Drinks - 5.png",
         ]}
         alt="Desserts & Drinks"
         title="Desserts & Drinks"
