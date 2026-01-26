@@ -45,7 +45,7 @@ const FAQSection = () => {
     },
     {
       question: "Can I make any burger a meal?",
-      answer: "Absolutely! Add fries and a drink to any burger for just £2.50."
+      answer: "Absolutely! you can add a fries and a drink for just £2.50."
     },
     {
       question: "What's your food hygiene rating?",

@@ -284,10 +284,10 @@ function Featuring() {
         imageSrc={[
           "/Images/featuring/Desserts & Drinks/Desserts & Drinks - 0.png",
           "/Images/featuring/Desserts & Drinks/Desserts & Drinks - 1.png",
+          "/Images/featuring/Desserts & Drinks/Desserts & Drinks - 5.png",
           "/Images/featuring/Desserts & Drinks/Desserts & Drinks - 2.png",
           "/Images/featuring/Desserts & Drinks/Desserts & Drinks - 3.png",
           "/Images/featuring/Desserts & Drinks/Desserts & Drinks - 4.png",
-          "/Images/featuring/Desserts & Drinks/Desserts & Drinks - 5.png",
         ]}
         alt="Desserts & Drinks"
         title="Desserts & Drinks"
