@@ -13,7 +13,7 @@ const LocationComponent = () => {
     mapQuery: "Grill Shack, 119 Falling Ln, West Drayton",
     contact: {
       phone: "+44 1895 913672",
-      email: "info@grillshack.co.uk"
+      email: "grillshack2024@hotmail.com"
     },
     openingTime: "Timing",
     extraInfo: "",

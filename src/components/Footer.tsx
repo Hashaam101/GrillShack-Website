@@ -90,10 +90,10 @@ const Footer = ({ scrollToSection }: { scrollToSection?: (sectionId: string) => 
                                         +44 1895 913672
                                     </a>
                                     <a
-                                        href="mailto:info@grillshack.co.uk"
+                                        href="mailto:grillshack2024@hotmail.com"
                                         className="hover:text-primary hover:underline cursor-pointer transition-colors"
                                     >
-                                        info@grillshack.co.uk
+                                        grillshack2024@hotmail.com
                                     </a>
                                 </div>
                             </div>
