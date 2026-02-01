@@ -71,14 +71,13 @@ const MenuPage = React.memo(function MenuPage() {
       <div className="h-[40px]" />
 
       {/* Order iframe */}
-      <div className="w-full rounded-[36px] overflow-hidden bg-[#0d0d0d]">
+      <div className="w-full rounded-[36px] overflow-hidden">
         <iframe
           src="https://www.food-order.net/index.php/web_orders/home/S1BLQ0FH?uid=667592c917cdc"
           id="outer_frame"
           width="100%"
           style={{
-            height: '900px',
-            filter: 'invert(1) hue-rotate(182deg)',
+            height: '900px'
           }}
           allow="payment"
           className="border-0"
