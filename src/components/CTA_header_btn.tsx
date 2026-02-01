@@ -23,8 +23,8 @@ export const AnimatedCTAButton: React.FC<AnimatedCTAButtonProps> = ({ buttonLeft
             zIndex: hoveredButton === 'left' ? 0 : 5
           }}
           animate={{
-            width: hoveredButton === 'right' ? "10%" : "35%",
-            left: hoveredButton === 'right' ? "35%" : "0%",
+            width: hoveredButton === 'right' ? "10%" : "42%",
+            left: hoveredButton === 'right' ? "42%" : "0%",
             borderTopRightRadius: hoveredButton === 'right' ? "8px" : "0px",
             borderBottomRightRadius: hoveredButton === 'right' ? "8px" : "0px"
           }}
@@ -57,7 +57,7 @@ export const AnimatedCTAButton: React.FC<AnimatedCTAButtonProps> = ({ buttonLeft
             zIndex: hoveredButton === 'right' ? 10 : 5
           }}
           animate={{
-            width: hoveredButton === 'left' ? "18%" : "65%",
+            width: hoveredButton === 'left' ? "18%" : "58%",
             right: hoveredButton === 'left' ? "50%" : "0%",
             borderTopLeftRadius: hoveredButton === 'right' ? "8px" : "0px",
             borderBottomLeftRadius: hoveredButton === 'right' ? "8px" : "0px"
