@@ -77,7 +77,7 @@ const MenuPage = React.memo(function MenuPage() {
           id="outer_frame"
           width="100%"
           style={{
-            height: '900px'
+            height: '90vh'
           }}
           allow="payment"
           className="border-0"
