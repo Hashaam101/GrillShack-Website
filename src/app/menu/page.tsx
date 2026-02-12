@@ -4,7 +4,6 @@ import React from "react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import MediaPreloader from "@/components/MediaPreloader";
-import HeroImg from "@/../public/Images/hero.webp";
 
 const MenuPage = React.memo(function MenuPage() {
   const [heroLoaded, setHeroLoaded] = React.useState(false);
@@ -35,8 +34,12 @@ const MenuPage = React.memo(function MenuPage() {
             Freshly Prepared Whilst You Wait
           </div>
           <MediaPreloader
-            src={typeof HeroImg === "string" ? HeroImg : (HeroImg.src ?? "")}
-            alt="Menu Page Image"
+            src="/Videos/grill_shack_aerial.mp4"
+            type="video"
+            autoPlay
+            loop
+            muted
+            playsInline
             className="absolute top-0 left-0 w-full h-full object-cover rounded-[36px] -z-10"
             onLoaded={() => setHeroLoaded(true)}
           />

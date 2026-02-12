@@ -13,6 +13,10 @@ interface MediaPreloaderProps {
   borderRadius?: string | number;
   children?: React.ReactNode;
   onLoaded?: () => void;
+  autoPlay?: boolean;
+  loop?: boolean;
+  muted?: boolean;
+  playsInline?: boolean;
 }
 
 const MediaPreloader: React.FC<MediaPreloaderProps> = ({
@@ -24,6 +28,10 @@ const MediaPreloader: React.FC<MediaPreloaderProps> = ({
   borderRadius = '12px',
   children,
   onLoaded,
+  autoPlay = false,
+  loop = false,
+  muted = false,
+  playsInline = false,
 }) => {
   // Allow dev to force all preloaders on
   const [loaded, setLoaded] = useState(false);
@@ -105,7 +113,10 @@ const MediaPreloader: React.FC<MediaPreloaderProps> = ({
         <video
           ref={videoRef}
           src={src}
-          controls
+          autoPlay={autoPlay}
+          loop={loop}
+          muted={muted}
+          playsInline={playsInline}
           className={`w-full h-full object-cover transition-opacity duration-500 ${loaded ? "opacity-100" : "opacity-0"}`}
           style={{ borderRadius }}
           onLoadedData={handleLoaded}
