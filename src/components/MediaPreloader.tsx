@@ -3,6 +3,7 @@
 // To disable and return to normal, set:
 //   window.__FORCE_PRELOADERS__ = false;
 import React, { useState } from "react";
+import Image from "next/image";
 
 interface MediaPreloaderProps {
   src: string;
@@ -77,17 +78,10 @@ const MediaPreloader: React.FC<MediaPreloaderProps> = ({
   };
 
   // For cached images, check if already complete using ref
-  const imgRef = React.useRef<HTMLImageElement>(null);
   const videoRef = React.useRef<HTMLVideoElement>(null);
 
   React.useEffect(() => {
     if (forcePreloader) return; // Don't auto-load if forced
-    if (type === "image" && imgRef.current) {
-      if (imgRef.current.complete && !loaded) {
-        setLoaded(true);
-        if (onLoaded) onLoaded();
-      }
-    }
     if (type === "video" && videoRef.current) {
       if (videoRef.current.readyState >= 3 && !loaded) {
         setLoaded(true);
@@ -96,15 +90,36 @@ const MediaPreloader: React.FC<MediaPreloaderProps> = ({
     }
   }, [src, type, onLoaded, loaded, forcePreloader]);
 
+  React.useEffect(() => {
+    if (type === "video" && videoRef.current) {
+      // Force muted attribute for iOS autoplay
+      if (muted) {
+        videoRef.current.muted = true;
+        videoRef.current.setAttribute("muted", "");
+      }
+      // Force playsinline attribute for iOS inline playback
+      if (playsInline) {
+        videoRef.current.setAttribute("playsinline", "");
+      }
+      // Attempt to play if autoPlay is set
+      if (autoPlay) {
+        videoRef.current.play().catch((e) => {
+          console.warn("Autoplay failed:", e);
+        });
+      }
+    }
+  }, [type, muted, playsInline, autoPlay]);
+
   return (
-  <div className={`absolute inset-0 flex items-center justify-center ${className}`} style={{ ...style, borderRadius }}>
+    <div className={`absolute inset-0 flex items-center justify-center ${className}`} style={{ ...style, borderRadius }}>
       {/* Always render the image/video so load event fires */}
       {type === "image" ? (
-        <img
-          ref={imgRef}
+        <Image
           src={src}
           alt={alt}
-          className={`w-full h-full object-cover transition-opacity duration-500 ${loaded ? "opacity-100" : "opacity-0"}`}
+          fill
+          sizes="100vw"
+          className={`object-cover transition-opacity duration-500 ${loaded ? "opacity-100" : "opacity-0"}`}
           style={{ borderRadius }}
           onLoad={handleLoaded}
           onError={handleError}
@@ -125,8 +140,8 @@ const MediaPreloader: React.FC<MediaPreloaderProps> = ({
           {children}
         </video>
       )}
-  {/* Overlay spinner only if not loaded, or if forcePreloader is on */}
-  {(!loaded || forcePreloader) && !error && (
+      {/* Overlay spinner only if not loaded, or if forcePreloader is on */}
+      {(!loaded || forcePreloader) && !error && (
         <div className="absolute inset-0 flex items-center justify-center z-10" style={{ borderRadius }}>
           {/* Solid grey background */}
           <div className="absolute inset-0 bg-[#c0c0c0] w-full h-full" style={{ borderRadius }} />
