@@ -59,7 +59,7 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-  const gaMeasurementId = 'G-E7K6Z23GXM';
+  const gaMeasurementId = 'G-2WCTSMXX5G';
 
 
   return (
