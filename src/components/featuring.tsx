@@ -126,11 +126,11 @@ function Featuring() {
       {/* Featured Dishes */}
       <FeaturedDishSection
         imageSrc={[
-          "/Images/featuring/Smashing burgers/Smashing burgers - 0.png",
-          "/Images/featuring/Smashing burgers/Smashing burgers - 1.png",
-          "/Images/featuring/Smashing burgers/Smashing burgers - 2.png",
-          "/Images/featuring/Smashing burgers/Smashing burgers - 3.png",
-          "/Images/featuring/Smashing burgers/Smashing burgers - 4.png",
+          "/Images/featuring/Smashing burgers/Smashing burgers - 0.webp",
+          "/Images/featuring/Smashing burgers/Smashing burgers - 1.webp",
+          "/Images/featuring/Smashing burgers/Smashing burgers - 2.webp",
+          "/Images/featuring/Smashing burgers/Smashing burgers - 3.webp",
+          "/Images/featuring/Smashing burgers/Smashing burgers - 4.webp",
         ]}
         alt="Smashing burgers"
         title="Smashing burgers"
@@ -165,10 +165,10 @@ function Featuring() {
 
       <FeaturedDishSection
         imageSrc={[
-          "/Images/featuring/Shack Style Boxes/Shack Style Boxes - 0.png",
-          "/Images/featuring/Shack Style Boxes/Shack Style Boxes - 1.png",
-          "/Images/featuring/Shack Style Boxes/Shack Style Boxes - 2.png",
-          "/Images/featuring/Shack Style Boxes/Shack Style Boxes - 3.png",
+          "/Images/featuring/Shack Style Boxes/Shack Style Boxes - 0.webp",
+          "/Images/featuring/Shack Style Boxes/Shack Style Boxes - 1.webp",
+          "/Images/featuring/Shack Style Boxes/Shack Style Boxes - 2.webp",
+          "/Images/featuring/Shack Style Boxes/Shack Style Boxes - 3.webp",
         ]}
         alt="Shack Style Boxes"
         title="Shack Style Boxes"
@@ -204,11 +204,11 @@ function Featuring() {
 
       <FeaturedDishSection
         imageSrc={[
-          "/Images/featuring/Lets Get Grilling/Lets Get Grilling - 0.png",
-          "/Images/featuring/Lets Get Grilling/Lets Get Grilling - 1.png",
-          "/Images/featuring/Lets Get Grilling/Lets Get Grilling - 2.png",
-          "/Images/featuring/Lets Get Grilling/Lets Get Grilling - 3.png",
-          "/Images/featuring/Lets Get Grilling/Lets Get Grilling - 4.png"
+          "/Images/featuring/Lets Get Grilling/Lets Get Grilling - 0.webp",
+          "/Images/featuring/Lets Get Grilling/Lets Get Grilling - 1.webp",
+          "/Images/featuring/Lets Get Grilling/Lets Get Grilling - 2.webp",
+          "/Images/featuring/Lets Get Grilling/Lets Get Grilling - 3.webp",
+          "/Images/featuring/Lets Get Grilling/Lets Get Grilling - 4.webp"
         ]}
         alt="Let's Get Grilling"
         title="Let's Get Grilling"
@@ -245,7 +245,7 @@ function Featuring() {
       />
 
       <FeaturedDishSection
-        imageSrc="/Images/featuring/Meal Options for everyone/Meal Options for everyone - 0.png"
+        imageSrc="/Images/featuring/Meal Options for everyone/Meal Options for everyone - 0.webp"
         alt="Meal Options for everyone"
         title="Meal Options for everyone"
         description={
@@ -262,10 +262,10 @@ function Featuring() {
 
       <FeaturedDishSection
         imageSrc={[
-          "/Images/featuring/Sides & Add-ons/Sides & Add-ons - 0.png",
-          "/Images/featuring/Sides & Add-ons/Sides & Add-ons - 1.png",
-          "/Images/featuring/Sides & Add-ons/Sides & Add-ons - 2.png",
-          "/Images/featuring/Sides & Add-ons/Sides & Add-ons - 3.png",
+          "/Images/featuring/Sides & Add-ons/Sides & Add-ons - 0.webp",
+          "/Images/featuring/Sides & Add-ons/Sides & Add-ons - 1.webp",
+          "/Images/featuring/Sides & Add-ons/Sides & Add-ons - 2.webp",
+          "/Images/featuring/Sides & Add-ons/Sides & Add-ons - 3.webp",
         ]}
         alt="Sides & Add-ons"
         title="Sides & Add-ons"
@@ -282,12 +282,12 @@ function Featuring() {
       />
       <FeaturedDishSection
         imageSrc={[
-          "/Images/featuring/Desserts & Drinks/Desserts & Drinks - 0.png",
-          "/Images/featuring/Desserts & Drinks/Desserts & Drinks - 1.png",
-          "/Images/featuring/Desserts & Drinks/Desserts & Drinks - 5.png",
-          "/Images/featuring/Desserts & Drinks/Desserts & Drinks - 2.png",
-          "/Images/featuring/Desserts & Drinks/Desserts & Drinks - 3.png",
-          "/Images/featuring/Desserts & Drinks/Desserts & Drinks - 4.png",
+          "/Images/featuring/Desserts & Drinks/Desserts & Drinks - 0.webp",
+          "/Images/featuring/Desserts & Drinks/Desserts & Drinks - 1.webp",
+          "/Images/featuring/Desserts & Drinks/Desserts & Drinks - 5.webp",
+          "/Images/featuring/Desserts & Drinks/Desserts & Drinks - 2.webp",
+          "/Images/featuring/Desserts & Drinks/Desserts & Drinks - 3.webp",
+          "/Images/featuring/Desserts & Drinks/Desserts & Drinks - 4.webp",
         ]}
         alt="Desserts & Drinks"
         title="Desserts & Drinks"

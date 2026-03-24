@@ -1,6 +1,6 @@
 import React from "react";
 import Image from "next/image";
-import Logo from "@/assets/Images/Logo.png";
+import Logo from "@/assets/Images/Logo.webp";
 
 const Footer = ({ scrollToSection }: { scrollToSection?: (sectionId: string) => void }) => (
     <footer className="w-full px-[10px] md:px-[50px] lg:px-[70px] pb-[20px] sm:pb-[10px]" style={{ background: 'var(--tt-bg-color)' }}>

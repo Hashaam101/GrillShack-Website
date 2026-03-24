@@ -1,6 +1,6 @@
 {
   "name": "grill-shack-uk",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "private": true,
   "scripts": {
     "dev": "next dev",
@@ -29,6 +29,7 @@
     "eslint": "9.39.2",
     "eslint-config-next": "16.0.10",
     "sass": "^1.87.0",
+    "sharp": "^0.34.5",
     "tailwindcss": "^4",
     "typescript": "^5"
   }

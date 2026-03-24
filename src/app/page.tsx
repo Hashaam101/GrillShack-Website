@@ -3,7 +3,7 @@
 import React from "react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
-import Hero from "@/../public/Images/hero.png";
+import Hero from "@/../public/Images/hero.webp";
 import Image from "next/image";
 import ThemeButton from "@/components/ThemeBtn";
 import InstagramComponent from "@/components/InstagramComponent";
@@ -41,7 +41,7 @@ const Home = React.memo(function Home() {
         {/* Hero background image - Mobile */}
         <div className="absolute inset-0 w-full h-full -z-10 sm:hidden">
           <Image
-            src="/Images/featuring/Section1.png"
+            src="/Images/featuring/Section1.webp"
             alt="Home Page Image Mobile"
             fill
             className="object-cover rounded-[24px]"

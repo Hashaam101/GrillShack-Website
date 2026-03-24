@@ -2,7 +2,7 @@
 
 import React from 'react';
 import { AnimatedCTAButton } from './CTA_header_btn';
-import logo from "@/assets/Images/logo_long.png";
+import logo from "@/assets/Images/logo_long.webp";
 import Image from 'next/image';
 import { AnimatedMenuButton } from './Menu_Header_btn';
 import { usePathname, useRouter } from 'next/navigation';
