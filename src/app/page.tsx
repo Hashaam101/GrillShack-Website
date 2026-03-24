@@ -1,16 +1,18 @@
 "use client";
 
 import React from "react";
+import dynamic from "next/dynamic";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import Hero from "@/../public/Images/hero.webp";
 import Image from "next/image";
 import ThemeButton from "@/components/ThemeBtn";
-import InstagramComponent from "@/components/InstagramComponent";
-import Reviews from "@/components/Reviews";
-import FAQSection from "@/components/FAQ_section";
-import LocationComponent from "@/components/OurLocation";
 import Featuring from "@/components/featuring";
+
+const InstagramComponent = dynamic(() => import("@/components/InstagramComponent"), { ssr: true });
+const Reviews = dynamic(() => import("@/components/Reviews"), { ssr: true });
+const FAQSection = dynamic(() => import("@/components/FAQ_section"), { ssr: true });
+const LocationComponent = dynamic(() => import("@/components/OurLocation"), { ssr: true });
 
 const Home = React.memo(function Home() {
   React.useEffect(() => {

@@ -1,0 +1,16 @@
+{
+  "name": "Grill Shack West Drayton",
+  "short_name": "Grill Shack",
+  "description": "Smash Burgers, Donner Meat & Grill Platters - Freshly Prepared Whilst You Wait.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#000000",
+  "theme_color": "#000000",
+  "icons": [
+    {
+      "src": "/favicon.ico",
+      "sizes": "any",
+      "type": "image/x-icon"
+    }
+  ]
+}

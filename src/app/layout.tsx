@@ -65,7 +65,30 @@ export default function RootLayout({
   return (
     <html lang="en" className="dark">
       <head>
-
+        <link rel="manifest" href="/manifest.json" />
+        <meta name="theme-color" content="#000000" />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "Restaurant",
+              "name": "Grill Shack",
+              "image": "https://grillshack.co.uk/favicon.ico",
+              "url": "https://grillshack.co.uk",
+              "telephone": "01895 913672",
+              "address": {
+                "@type": "PostalAddress",
+                "streetAddress": "119 Falling Lane",
+                "addressLocality": "Yiewsley, West Drayton",
+                "postalCode": "UB7 8AG",
+                "addressCountry": "GB"
+              },
+              "servesCuisine": ["Burgers", "Grill", "Halal"],
+              "priceRange": "$$"
+            })
+          }}
+        />
       </head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
